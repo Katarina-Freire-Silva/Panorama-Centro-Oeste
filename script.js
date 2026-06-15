@@ -369,6 +369,67 @@ document.addEventListener("DOMContentLoaded", () => {
             ano: 2022,
             arquivo: "../music/MM---Troca-de-Calçada.mp3"
         },
+
+        {
+            titulo: "Flor E O Beija-Flor",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Flor-E-O-Beija-Flor.mp3"
+        },
+                {
+            titulo: "Garçon Fecha o bar",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Garçon-Fecha-o-bar.mp3"
+        },
+        {
+            titulo: "Na Hora Da Raiva",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Na-Hora-Da-Raiva.mp3"
+        },
+        {
+            titulo: "Não To Valendo Nada",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Não-To-Valendo-Nada.mp3"
+        },
+        {
+            titulo: "Cuida Bem Dela",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Cuida-Bem-Dela.mp3"
+        },
+        {
+            titulo: "Até Você Voltar",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Até-Você-Voltar.mp3"
+        },
+        {
+            titulo: "As vezes",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---As-vezes.mp3"
+        },
+        {
+            titulo: "Recaídas",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Recaídas.mp3"
+        },
+        {
+            titulo: "Mudando De Assunto",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Mudando-De-Assunto.mp3"
+        },
+        {
+            titulo: "Aquela Pessoa",
+            artista: "Henrique e Juliano",
+            ano: 2015,
+            arquivo: "../music/HJ---Aquela-Pessoa.mp3"
+        },
     ];
 
     // ----- ELEMENTOS -----
