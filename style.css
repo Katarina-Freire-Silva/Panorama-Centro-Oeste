@@ -15,6 +15,7 @@ header{
     padding: 20px;
     background-color: turquoise;
     justify-content: space-between;
+    position: relative;
 }
 
 footer{
@@ -29,7 +30,7 @@ footer{
     font-size: 12px;
 }
 
-/* Estlização de tags padrão*/
+/* Estlização de tags padrão */
 
 a{
     text-decoration: none;
@@ -41,7 +42,83 @@ h1{
     font-size: 20px;
 }
 
-h3{
-    font-size: 15px;
-    gap: 10px;
+/* nav - div - e estruras assim */
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+.nav-item{
+    position: relative;
+}
+
+/* Botão que parece um link normal */
+.dropdown-toggle{
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    margin-inline-end: 15px;
+    font-family: inherit;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.arrow{
+    font-size: 12px;
+    transition: transform 0.25s ease;
+}
+
+/* Gira a setinha quando o menu está aberto */
+.dropdown.active .arrow{
+    transform: rotate(180deg);
+}
+
+/* Menu suspenso */
+.dropdown-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Abre com clique OU hover */
+.dropdown.active .dropdown-menu,
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a{
+    color: #222;
+    padding: 10px 15px;
+    margin-inline-end: 0;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover{
+    background-color: #f0f0f0;
+}
+
+.dropdown-menu.align-right{
+    left: auto;
+    right: 0;
+}
+
