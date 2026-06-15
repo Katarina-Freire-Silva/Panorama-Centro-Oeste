@@ -491,6 +491,67 @@ document.addEventListener("DOMContentLoaded", () => {
             ano: 2024,
             arquivo: "../music/MM---Eu-Sou-Ela.mp3"
         },
+
+        {
+            titulo: "Um Rei",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Um-Rei.mp3"
+        },
+        {
+            titulo: "Vereda Tropical",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Vereda-Tropical.mp3"
+        },
+        {
+            titulo: "Tico-Tico No Fubá",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Tico-Tico-No-Fubá.mp3"
+        },
+        {
+            titulo: "A Cor do Desejo",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---A-Cor-do-Desejo.mp3"
+        },
+        {
+            titulo: "Seu Tipo",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Seu-Tipo.mp3"
+        },
+        {
+            titulo: "Belíssima",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Belíssima.mp3"
+        },
+        {
+            titulo: "Sangue Latino",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Sangue-Latino.mp3"
+        },
+        {
+            titulo: "Samba Rasgado",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Samba-Rasgado.mp3"
+        },
+        {
+            titulo: "Viajante",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Viajante.mp3"
+        },
+        {
+            titulo: "Homem Com H",
+            artista: "Ney Matogrosso",
+            ano: 1987,
+            arquivo: "../music/NM---Homem-Com-H.mp3"
+        },
     ];
 
     // ----- ELEMENTOS -----
