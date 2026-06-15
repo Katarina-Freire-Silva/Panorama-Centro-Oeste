@@ -308,6 +308,67 @@ document.addEventListener("DOMContentLoaded", () => {
             ano: 2022,
             arquivo: "../music/JM---Louca-de-Saudade.mp3"
         },
+
+        {
+            titulo: "Te Amo Demais",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Te-amo-Demais.mp3"
+        },
+                {
+            titulo: "Leão",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Leão.mp3"
+        },
+        {
+            titulo: "Me Ame Mais",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Me-Ame-Mais.mp3"
+        },
+        {
+            titulo: "Hackearam-me",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Hackearam-me.mp3"
+        },
+        {
+            titulo: "Não Era Pra Ser Assim",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Não-Era-Pra-Ser-Assim.mp3"
+        },
+        {
+            titulo: "Pra Falar a Verdade",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Pra-Falar-a-Verdade.mp3"
+        },
+        {
+            titulo: "Café da Manhã",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Café-da-Manhã.mp3"
+        },
+        {
+            titulo: "Morango do Nordeste",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Morango-do-Nordeste.mp3"
+        },
+        {
+            titulo: "O Que Falta Em Você Sou Eu",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---O-Que-Falta-Em-Você-Sou-Eu.mp3"
+        },
+        {
+            titulo: "Troca de Calçada",
+            artista: "Marília Mendonça",
+            ano: 2022,
+            arquivo: "../music/MM---Troca-de-Calçada.mp3"
+        },
     ];
 
     // ----- ELEMENTOS -----
