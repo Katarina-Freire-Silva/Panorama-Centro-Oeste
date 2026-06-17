@@ -93,68 +93,81 @@
     <section id="radio">
         <h2>Rádio Centro-Oeste</h2>
 
-        <div class="radio-player">
+        <div class="radio-layout">
 
-            <!-- Disco giratório -->
-            <div class="disco-wrapper">
-                <div class="disco" id="disco">
-                    <div class="disco-furo"></div>
+            <!-- Lado esquerdo: disco e player -->
+            <div class="radio-player">
+
+                <!-- Disco giratório -->
+                <div class="disco-wrapper">
+                    <div class="disco" id="disco">
+                        <div class="disco-furo"></div>
+                    </div>
+                </div>
+
+                <!-- Informações da música -->
+                <div class="musica-info">
+                    <h3 id="info-titulo">Selecione uma música</h3>
+                    <p id="info-artista">Artista: --</p>
+                    <p id="info-ano">Lançamento: --</p>
+                </div>
+
+                <!-- Controles -->
+                <div class="player-controls">
+                    <button id="btn-anterior" title="Anterior">⏮</button>
+                    <button id="btn-play" title="Tocar/Pausar">▶</button>
+                    <button id="btn-proximo" title="Próxima">⏭</button>
+                </div>
+
+                <!-- Barra de progresso -->
+                <div class="progress-container">
+                    <span id="tempo-atual">0:00</span>
+                    <input type="range" id="progress-bar" value="0" min="0" max="100">
+                    <span id="tempo-total">0:00</span>
+                </div>
+
+                <!-- Volume -->
+                <div class="volume-container">
+                    <label for="volume">🔊</label>
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+                </div>
+
+            </div>
+
+            <!-- Lado direito: filtros e lista -->
+            <div class="radio-filtros">
+                <h3>Selecionar música</h3>
+
+                <div class="filtro-grupo">
+                    <label for="filtro-artista">Artista:</label>
+                    <select id="filtro-artista">
+                        <option value="">Todos</option>
+                    </select>
+
+                    <label for="filtro-ano">Ano:</label>
+                    <select id="filtro-ano">
+                        <option value="">Todos</option>
+                    </select>
+
+                    <button id="btn-filtrar">Buscar músicas</button>
+                </div>
+                
+                    <!-- NOVO: Cartão fixo da música tocando agora -->
+                <div class="tocando-agora-fixo">
+                    <span class="tocando-agora-icone">🎵</span>
+                    <div class="tocando-agora-texto">
+                        <strong id="fixo-titulo">Nenhuma música selecionada</strong>
+                        <span id="fixo-artista">--</span>
+                    </div>
+                </div>
+
+                    <!-- Container com rolagem interna -->
+                <div class="lista-musicas-wrapper">
+                    <ul id="lista-musicas"></ul>
                 </div>
             </div>
-
-            <!-- Informações da música -->
-            <div class="musica-info">
-                <h3 id="info-titulo">Selecione uma música</h3>
-                <p id="info-artista">Artista: --</p>
-                <p id="info-ano">Lançamento: --</p>
-            </div>
-
-            <!-- Controles -->
-            <div class="player-controls">
-                <button id="btn-anterior" title="Anterior">⏮</button>
-                <button id="btn-play" title="Tocar/Pausar">▶</button>
-                <button id="btn-proximo" title="Próxima">⏭</button>
-            </div>
-
-            <!-- Barra de progresso -->
-            <div class="progress-container">
-                <span id="tempo-atual">0:00</span>
-                <input type="range" id="progress-bar" value="0" min="0" max="100">
-                <span id="tempo-total">0:00</span>
-            </div>
-
-            <!-- Volume -->
-            <div class="volume-container">
-                <label for="volume">🔊</label>
-                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
-            </div>
-
         </div>
-
-        <!-- Filtros -->
-        <div class="radio-filtros">
-            <h3>Selecionar música</h3>
-
-            <div class="filtro-grupo">
-                <label for="filtro-artista">Artista:</label>
-                <select id="filtro-artista">
-                    <option value="">Todos</option>
-                </select>
-
-                <label for="filtro-ano">Ano:</label>
-                <select id="filtro-ano">
-                    <option value="">Todos</option>
-                </select>
-
-                <button id="btn-filtrar">Buscar músicas</button>
-            </div>
-
-            <!-- Lista de músicas (resultado do filtro ou todas) -->
-            <ul id="lista-musicas"></ul>
-        </div>
-
     </section>
-
     <audio id="audio-player"></audio>
 
     <footer>
