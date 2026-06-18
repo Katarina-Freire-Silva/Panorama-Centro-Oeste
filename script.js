@@ -233,6 +233,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const audioPlayer = document.getElementById("audio-player");
     if (!audioPlayer) return;
 
+    audioPlayer.addEventListener("play", () => {
+        atualizarIconePlay(true);
+
+        if (disco) {
+            disco.classList.add("tocando");
+        }
+    });
+
+    audioPlayer.addEventListener("pause", () => {
+        atualizarIconePlay(false);
+
+        if (disco) {
+            disco.classList.remove("tocando");
+        }
+    });
+
     const CHAVE_INDICE = "radio_indiceAtual";
     const CHAVE_TEMPO = "radio_tempoAtual";
 
@@ -280,23 +296,49 @@ document.addEventListener("DOMContentLoaded", () => {
         infoAno.textContent = `Lançamento: ${musica.ano}`;
 
         disco.classList.add("tocando");
-        btnPlay.textContent = "⏸";
-
+        atualizarIconePlay(true);
         const itens = listaMusicas.querySelectorAll("li");
         itens.forEach(li => li.classList.remove("tocando-agora"));
         const itemAtual = [...itens].find(li => li.textContent.includes(musica.titulo));
         if (itemAtual) itemAtual.classList.add("tocando-agora");
     }
 
+    // ----- Troca o ícone do botão de play/pause -----
+    function atualizarIconePlay(tocando){
+        if (!btnPlay) return;
+        const icone = btnPlay.querySelector(".material-symbols-outlined");
+        if (icone) {
+            icone.textContent = tocando ? "pause" : "play_arrow";
+        }
+    }
+
     // ----- Toca uma música pelo índice global (array completo "musicas") -----
     function tocarMusicaGlobal(indice, tempoInicial = 0){
         const musica = musicas[indice];
+
+
+        console.log("Música:", musica);
+        console.log("Arquivo:", musica.arquivo);
+
         if (!musica) return;
 
         audioPlayer.src = musica.arquivo;
-        audioPlayer.currentTime = tempoInicial;
-        audioPlayer.play().catch(() => {});
 
+        console.log("SRC FINAL:", audioPlayer.src);
+
+        audioPlayer.currentTime = tempoInicial;
+
+        audioPlayer.play()
+            .then(() => {
+                atualizarInterface(musica);
+                atualizarIconePlay(true);
+                disco?.classList.add("tocando");
+            })
+            .catch(() => {
+                atualizarInterface(musica);
+                atualizarIconePlay(false);
+                disco?.classList.remove("tocando");
+            });
         localStorage.setItem(CHAVE_INDICE, indice);
 
         atualizarInterface(musica);
@@ -400,13 +442,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ----- Botão de play/pause -----
     btnPlay.addEventListener("click", () => {
         if (audioPlayer.paused){
-            audioPlayer.play().catch(() => {});
-            disco.classList.add("tocando");
-            btnPlay.textContent = "⏸";
+            audioPlayer.play();
         } else {
             audioPlayer.pause();
-            disco.classList.remove("tocando");
-            btnPlay.textContent = "▶";
         }
     });
 

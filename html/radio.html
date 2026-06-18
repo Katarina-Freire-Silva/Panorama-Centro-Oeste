@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="../style.css">
     <title>Site do centro-Oeste</title>
 </head>
@@ -115,9 +116,15 @@
 
                 <!-- Controles -->
                 <div class="player-controls">
-                    <button id="btn-anterior" title="Anterior">⏮</button>
-                    <button id="btn-play" title="Tocar/Pausar">▶</button>
-                    <button id="btn-proximo" title="Próxima">⏭</button>
+                    <button id="btn-anterior" title="Anterior">
+                        <span class="material-symbols-outlined"> skip_previous </span>
+                    </button>
+                    <button id="btn-play" title="Tocar/Pausar">
+                        <span class="material-symbols-outlined">play_arrow</span>
+                    </button>
+                    <button id="btn-proximo" title="Próxima">
+                        <span class="material-symbols-outlined"> skip_next </span>
+                    </button>
                 </div>
 
                 <!-- Barra de progresso -->
@@ -129,7 +136,9 @@
 
                 <!-- Volume -->
                 <div class="volume-container">
-                    <label for="volume">🔊</label>
+                    <label for="volume">
+                        <span class="material-symbols-outlined"> volume_up </span>
+                    </label>
                     <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
                 </div>
 
@@ -155,8 +164,7 @@
                 
                     <!-- NOVO: Cartão fixo da música tocando agora -->
                 <div class="tocando-agora-fixo">
-                    <span class="tocando-agora-icone">🎵</span>
-                    <div class="tocando-agora-texto">
+                    <span class="material-symbols-outlined"> headphones </span>                    <div class="tocando-agora-texto">
                         <strong id="fixo-titulo">Nenhuma música selecionada</strong>
                         <span id="fixo-artista">--</span>
                     </div>
