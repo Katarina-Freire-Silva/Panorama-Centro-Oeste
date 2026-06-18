@@ -257,6 +257,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const infoTitulo = document.getElementById("info-titulo");
     const infoArtista = document.getElementById("info-artista");
     const infoAno = document.getElementById("info-ano");
+    const fixoTitulo = document.getElementById("fixo-titulo");
+    const fixoArtista = document.getElementById("fixo-artista");
 
     const btnPlay = document.getElementById("btn-play");
     const btnAnterior = document.getElementById("btn-anterior");
@@ -294,6 +296,14 @@ document.addEventListener("DOMContentLoaded", () => {
         infoTitulo.textContent = musica.titulo;
         infoArtista.textContent = `Artista: ${musica.artista}`;
         infoAno.textContent = `Lançamento: ${musica.ano}`;
+
+        if (fixoTitulo) {
+            fixoTitulo.textContent = musica.titulo;
+        }
+
+        if (fixoArtista) {
+            fixoArtista.textContent = musica.artista;
+        }
 
         disco.classList.add("tocando");
         atualizarIconePlay(true);
