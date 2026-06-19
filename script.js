@@ -532,3 +532,114 @@ document.addEventListener("DOMContentLoaded", () => {
         atualizarInterface(musicas[indiceJaTocando]);
     }
 });
+
+
+/* ---------------------------- SCRIPT DAS NOTÍCIAS ---------------------------*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("noticias-grid");
+    if (!grid) return; // só roda na página de notícias
+
+    const loading = document.getElementById("noticias-loading");
+    const erro = document.getElementById("noticias-erro");
+    const botoesFiltro = document.querySelectorAll(".filtro-estado");
+
+    // ATENÇÃO: troque pela sua chave da GNews (veja nota de segurança abaixo)
+    const GNEWS_API_KEY = "eaa6e3c172e18829f1abfb442deef235";
+
+    // Termos de busca por estado/região
+    const termosBusca = {
+        "centro-oeste": "Brasília OR Goiânia OR Cuiabá OR \"Campo Grande\" OR \"Centro-Oeste\"",
+        "df": "Brasília OR \"Distrito Federal\"",
+        "go": "Goiânia OR Goiás",
+        "mt": "Cuiabá OR \"Mato Grosso\"",
+        "ms": "\"Campo Grande\" OR \"Mato Grosso do Sul\""
+    };
+
+    async function buscarNoticias(estado = "centro-oeste") {
+        loading.style.display = "block";
+        erro.style.display = "none";
+        grid.innerHTML = "";
+
+        const query = encodeURIComponent(termosBusca[estado]);
+        const url = `https://gnews.io/api/v4/search?q=${query}&lang=pt&country=br&max=12&apikey=${GNEWS_API_KEY}`;
+
+        try {
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error("Erro na resposta da API");
+            }
+
+            const data = await response.json();
+
+            loading.style.display = "none";
+
+            if (!data.articles || data.articles.length === 0) {
+                erro.textContent = "Nenhuma notícia encontrada para essa região no momento.";
+                erro.style.display = "block";
+                return;
+            }
+
+            renderizarNoticias(data.articles);
+
+        } catch (error) {
+            console.error("Erro ao buscar notícias:", error);
+            loading.style.display = "none";
+            erro.textContent = "Não foi possível carregar as notícias no momento.";
+            erro.style.display = "block";
+        }
+    }
+
+    function renderizarNoticias(artigos) {
+        grid.innerHTML = "";
+
+        artigos.forEach((artigo) => {
+            const card = document.createElement("a");
+            card.classList.add("noticia-card");
+            card.href = artigo.url;
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+            card.style.textDecoration = "none";
+            card.style.color = "inherit";
+
+            const dataFormatada = formatarData(artigo.publishedAt);
+
+            card.innerHTML = `
+                <img src="${artigo.image || ''}" alt="${artigo.title}" onerror="this.style.display='none'">
+                <div class="noticia-conteudo">
+                    <span class="noticia-fonte">${artigo.source?.name || "Fonte desconhecida"}</span>
+                    <h3 class="noticia-titulo">${artigo.title}</h3>
+                    <p class="noticia-resumo">${artigo.description || ""}</p>
+                    <span class="noticia-data">${dataFormatada}</span>
+                </div>
+            `;
+
+            grid.appendChild(card);
+        });
+    }
+
+    function formatarData(dataISO) {
+        if (!dataISO) return "";
+        const data = new Date(dataISO);
+        return data.toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric"
+        });
+    }
+
+    // ----- Filtro por estado -----
+    botoesFiltro.forEach((botao) => {
+        botao.addEventListener("click", () => {
+            botoesFiltro.forEach((b) => b.classList.remove("active"));
+            botao.classList.add("active");
+
+            const estado = botao.dataset.estado;
+            buscarNoticias(estado);
+        });
+    });
+
+    // ----- Carrega notícias da região inteira ao abrir a página -----
+    buscarNoticias("centro-oeste");
+});

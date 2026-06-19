@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <link rel="stylesheet" href="../style.css">
+    <title>O CERRADO</title>
+</head>
+<body> 
+    <header>
+        <img src="../image/logo.png" alt="Logo" class="logo">
+        <nav>            
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Home <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="../index.html#home-centroOeste">Centro-Oeste</a>
+                    <a href="../index.html#home-historia">História</a>
+                    <a href="../index.html#home-curiosidades">Curiosidades</a>
+                    <a href="../index.html#home-grandesNomes">Grandes Nomes</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Notícias <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./noticias.html#noticias-politica">Política</a>
+                    <a href="./noticias.html#noticias-economia">Economia</a>
+                    <a href="./noticias.html#noticias-meioAmbiente">Meio Ambiente</a>
+                    <a href="./noticias.html#noticias-agropecuaria">Agropecuária</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Costumes <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./costumes.html#costumes-girias">Gírias Tradicionais</a>
+                    <a href="./costumes.html#costumes-lingua">Influências Linguísticas</a>
+                    <a href="./costumes.html#costumes-festas">Festas Tradicionais</a>
+                    <a href="./costumes.html#costumes-religiao">Religião</a>
+                    <a href="./costumes.html#costumes-esporte">Esporte</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Cultura <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./cultura.html#cultura-musica">Música</a>
+                    <a href="./cultura.html#cultura-danca">Danças Típicas</a>
+                    <a href="./cultura.html#cultura-gastronomia">Gastronomia</a>
+                    <a href="./cultura.html#cultura-artesanato">Artesanato</a>
+                    <a href="./cultura.html#cultura-literatura">Literatura</a>
+                    <a href="./cultura.html#cultura-folclore">Folclore e Lendas</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Turismo <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./turismo.html#turismo-roteiros">Roteiros</a>
+                    <a href="./turismo.html#turismo-hospedagem">Hospedagem</a>
+                    <a href="./turismo.html#turismo-eventos">Eventos</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Natureza <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                </button>
+                <div class="dropdown-menu align-right">
+                    <a href="./natureza.html#natureza-fauna">Fauna</a>
+                    <a href="./natureza.html#natureza-flora">Flora</a>
+                    <a href="./natureza.html#natureza-parques">Parques e Reservas</a>
+                    <a href="./natureza.html#natureza-preservacao">Preservação</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="./radio.html#radio">Rádio</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="noticias">
+        <h2>Notícias do Centro-Oeste</h2>
+    
+        <!-- Filtro por estado -->
+        <div class="filtro-noticias">
+            <button class="filtro-estado active" data-estado="centro-oeste">Toda a Região</button>
+            <button class="filtro-estado" data-estado="df">Distrito Federal</button>
+            <button class="filtro-estado" data-estado="go">Goiás</button>
+            <button class="filtro-estado" data-estado="mt">Mato Grosso</button>
+            <button class="filtro-estado" data-estado="ms">Mato Grosso do Sul</button>
+        </div>
+    
+        <!-- Indicador de carregamento -->
+        <div id="noticias-loading" class="noticias-loading">Carregando notícias...</div>
+    
+        <!-- Grid de notícias -->
+        <div id="noticias-grid" class="noticias-grid"></div>
+    
+        <!-- Mensagem de erro / sem resultados -->
+        <div id="noticias-erro" class="noticias-erro" style="display: none;">
+            Não foi possível carregar as notícias no momento.
+        </div>
+    </section>    
+
+    <audio id="audio-player"></audio>
+
+    <footer>
+        
+        <p>
+            Desenvolvido por: Katarina Freire Silva, Luis Felipe Novais Conrado, Manuela Teixeira de Oliveira, Rodrigo Ramos Ribeiro, Sarah da Conceição Lamas Bento.
+        </p>
+        <p>
+            Copyright © 2026 O CERRADO. Todos os direitos reservados. Taboão da Serra, São Paulo - Brasil.
+        </p>
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
+
