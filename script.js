@@ -221,6 +221,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+const grid = document.querySelector(".destinos-grid");
+
+document.querySelector(".destino-proximo").onclick = () => {
+    grid.scrollBy({
+        left: 340,
+        behavior: "smooth"
+    });
+};
+
+document.querySelector(".destino-anterior").onclick = () => {
+    grid.scrollBy({
+        left: -340,
+        behavior: "smooth"
+    });
+};
+
 
 /* ----------------------------- SCRIPT DO RÁDIO ------------------------------*/
 
