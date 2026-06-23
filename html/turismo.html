@@ -536,98 +536,215 @@
                 <h2>Onde se Hospedar</h2>
 
                 <p>
-                    Nessa seção, preparamos três modelos de hospedagem feitas para você em cada uma das regiões do Centro-Oeste. A seleção estará entre um modelo mais premiun, caso queira esbanjar, um modelo médio para ficar confortável, ou o econômico, para curtir sem o prejuízo no bolso. Além disso, aqui você também pode calcular a distância da sua localização com qualquer outro lugar que pesquisar, o que ajuda em diversas situações.
+                    Nessa seção, preparamos três modelos de hospedagem feitas para você em cada uma das regiões do Centro-Oeste. A seleção estará entre um modelo mais premiun, caso queira esbanjar, um modelo médio para ficar confortável, ou o econômico, para curtir sem o prejuízo no bolso.
                 </p>
             </div>
         </section>
 
-        <div class="hospedagem-estados">
+        <div class="hospedagem-tela">
 
             <!-- DISTRITO FEDERAL -->
-            <div class="estado-hospedagem">
+            <div class="estado-hospedagem" data-estado="DF">
                 <h3>Distrito Federal</h3>
 
-                <div class="hotel-card luxo">
-                    <span>🏆 Luxo</span>
-                    <h4>Royal Tulip Brasília Alvorada</h4>
-                    <p>Hotel cinco estrelas às margens do Lago Paranoá.</p>
-                </div>
+                <div class="hotel-lista">
 
-                <div class="hotel-card medio">
-                    <span>⭐ Intermediário</span>
-                    <h4>Windsor Brasília Hotel</h4>
-                    <p>Excelente localização e conforto.</p>
-                </div>
+                    <div class="hotel-card luxo" data-img="../image/hospedagem-luxo-1.jpg">
+                        <span class="material-symbols-outlined"> star star star  <span> LUXO </span></span>
+                        <h4>Royal Tulip Brasília Alvorada</h4>
+                        <p> <strong>Local: </strong>Setor de Hotéis e Turismo Norte (SHTN), à beira do Lago Paranoá, próximo ao Palácio da Alvorada.</p>
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 1.239 para 2 adultos.</p>
+                            <p> <strong>Geral: </strong>Hotel 5 estrelas muito sofisticado, com três piscinas externas, spa, quadras de tênis, academia e dois bares. Excelente para quem busca tranquilidade e uma vista privilegiada.</p>
+                        </div>
+                    </div>
 
-                <div class="hotel-card economico">
-                    <span>💰 Custo-benefício</span>
-                    <h4>Athos Bulcão Hplus Executive</h4>
-                    <p>Boa estrutura por preço acessível.</p>
+                    <div class="hotel-card medio" data-img="../image/hospedagem-intermed-1.jpg">
+                        <span class="material-symbols-outlined"> star star  <span> INTERMEDIÁRIO </span></span>
+                        <h4>B Hotel Brasília</h4>
+                        <p> <strong>Local: </strong>Setor Hoteleiro Norte (SHN), no centro do Plano Piloto, perto das principais vias.</p>
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 1.174 para 2 adultos.</p>
+                            <p> <strong>Geral: </strong> Hotel 4 estrelas design e moderno. Oferece uma belíssima piscina na cobertura, dois bares, restaurante de alta gastronomia e quartos espaçosos com vista panorâmica da cidade.</p>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="hotel-card economico" data-img="../image/hospedagem-eco-1.jpeg">
+                        <span class="material-symbols-outlined"> star <span> CUSTO-BENEFÍCIO </span></span>
+                        <h4>Hotel Suntuoso</h4>
+                        <p> <strong>Local: </strong>Região de Águas Claras / Arniqueira, acesso facilitado para o aeroporto e plano piloto.</p>
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 178 para 2 adultos (inclui café da manhã).</p>
+                            <p> <strong>Geral: </strong> Conhecido pelo excelente atendimento, ambiente limpo, quartos confortáveis e climatizados. Possui estacionamento coberto, wi-fi gratuito e é uma opção inteligente para economizar sem abrir mão do conforto.</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
+            <div class="imagem-estado">
+                <h3>Distrito Federal</h3>
+                <img id="imagemDF" src="../image/fundo-df.jpg" alt="Distrito Federal">
+            </div>
+        </div>
+
+        <div class="hospedagem-tela">
 
             <!-- GOIÁS -->
-            <div class="estado-hospedagem">
+            <div class="estado-hospedagem" data-estado="GO">
                 <h3>Goiás</h3>
+                <div class="hotel-lista">
 
-                <div class="hotel-card luxo">
-                    <span>🏆 Luxo</span>
-                    <h4>Pousada Inácia (Alto Paraíso)</h4>
-                </div>
+                    <div class="hotel-card luxo" data-img="../image/hospedagem-luxo-2.jpg">
+                        <span class="material-symbols-outlined"> star star star  <span> LUXO </span></span>
+                        <h4>Transamerica Collection Goiânia</h4>
+                        <p> <strong>Local: </strong>Rua T-51, 3 - Setor Marista, Goiânia.</p>
 
-                <div class="hotel-card medio">
-                    <span>⭐ Intermediário</span>
-                    <h4>Pousada Maya (Chapada dos Veadeiros)</h4>
-                </div>
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 539 (para 2 adultos).</p>
+                            <p> <strong>Geral: </strong>Localizado no icônico complexo do Órion Business & Health Complex, este hotel oferece elegância, vistas panorâmicas da cidade e quartos com decoração moderna e refinada. Os hóspedes têm acesso à piscina externa, spa e excelentes restaurantes na cobertura. O café da manhã é frequentemente avaliado como um dos melhores da capital.</p>
+                        </div>
 
-                <div class="hotel-card economico">
-                    <span>💰 Custo-benefício</span>
-                    <h4>Pousada Rubi Violeta</h4>
+                    </div>
+
+                    <div class="hotel-card medio" data-img="../image/hospedagem-intermed-2.png">
+                        <span class="material-symbols-outlined"> star star  <span> INTERMEDIÁRIO </span></span>
+                        <h4>Golden Lis Hotel Boutique</h4>
+                        <p> <strong>Local: </strong>Av. das Indústrias, 75 - Santa Genoveva, Goiânia.</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 548 (para 2 adultos).</p>
+                            <p> <strong>Geral: </strong> Ideal para quem busca charme e um atendimento altamente elogiado. Tem uma decoração clássica temática, estilo europeu, e fica muito próximo ao Aeroporto de Goiânia. Conta com academia, restaurante próprio, spa e quartos amplos com roupas de cama de altíssima qualidade.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="hotel-card economico" data-img="../image/hospedagem-eco-2.jpg">
+                        <span class="material-symbols-outlined"> star <span> CUSTO-BENEFÍCIO </span></span>
+                        <h4>Umuarama Plaza Hotel</h4>
+                        <p> <strong>Local: </strong>Rua 4, 492 - Setor Central, Goiânia.</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 166 (para 2 adultos).</p>
+                            <p> <strong>Geral: </strong> Perfeito para quem busca aliar economia e conforto. Tem uma localização central excelente, perto do comércio e áreas históricas da cidade. Oferece quartos despojados e funcionais, ar-condicionado, Wi-Fi, um bom café da manhã incluso e estacionamento com manobrista (taxa cobrada à parte).</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
-            <!-- MATO GROSSO -->
-            <div class="estado-hospedagem">
-                <h3>Mato Grosso</h3>
-
-                <div class="hotel-card luxo">
-                    <span>🏆 Luxo</span>
-                    <h4>Malai Manso Resort</h4>
-                </div>
-
-                <div class="hotel-card medio">
-                    <span>⭐ Intermediário</span>
-                    <h4>Delmond Hotel</h4>
-                </div>
-
-                <div class="hotel-card economico">
-                    <span>💰 Custo-benefício</span>
-                    <h4>Hotel Taiamã</h4>
-                </div>
-            </div>
-
-            <!-- MATO GROSSO DO SUL -->
-            <div class="estado-hospedagem">
-                <h3>Mato Grosso do Sul</h3>
-
-                <div class="hotel-card luxo">
-                    <span>🏆 Luxo</span>
-                    <h4>Zagaia Eco Resort</h4>
-                </div>
-
-                <div class="hotel-card medio">
-                    <span>⭐ Intermediário</span>
-                    <h4>Pousada Arte da Natureza</h4>
-                </div>
-
-                <div class="hotel-card economico">
-                    <span>💰 Custo-benefício</span>
-                    <h4>Marruá Hotel</h4>
-                </div>
+            <div class="imagem-estado">
+                <h3>Goiás</h3>
+                <img id="imagemGO" src="../image/fundo-go.jfif" alt="Goiás">
             </div>
 
         </div>
 
+        <div class="hospedagem-tela">
+
+            <!-- MATO GROSSO -->
+            <div class="estado-hospedagem" data-estado="MT">
+                <h3>Mato Grosso</h3>
+                <div class="hotel-lista">
+
+                    <div class="hotel-card luxo" data-img="../image/hospedagem-luxo-3.jpg">
+                        <span class="material-symbols-outlined"> star star star  <span> LUXO </span></span>
+                        <h4>Cristalino Lodge</h4>
+                        <p> <strong>Local: </strong>Alta Floresta - Mato Grosso.</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong> Diárias a partir de R$ 1.500 por pessoa (geralmente vendido em pacotes com pensão completa).</p>
+                            <p> <strong>Geral: </strong>Um dos ecolodges mais premiados do mundo, localizado dentro de uma reserva particular. A diária inclui pensão completa (refeições orgânicas), passeios de barco, canoagem, trilhas guiadas com biólogos e acesso a torres de observação de aves e da copa das árvores.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="hotel-card medio" data-img="../image/hospedagem-intermed-3.jpg">
+                        <span class="material-symbols-outlined"> star star  <span> INTERMEDIÁRIO </span></span>
+                        <h4>Ucayali Hotel</h4>
+                        <p> <strong>Local: </strong>Av. das Figueiras, Sinop (Norte de Mato Grosso).</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 450 para duas pessoas.</p>
+                            <p> <strong>Geral: </strong>Considerado um dos melhores hotéis da região, muito bem avaliado por viajantes corporativos e casais. Conta com quartos amplos, piscina, academia completa e um café da manhã muito elogiado. Possui excelente estrutura para quem viaja a trabalho ou a lazer.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="hotel-card economico" data-img="../image/hospedagem-eco-3.jpg">
+                        <span class="material-symbols-outlined"> star <span> CUSTO-BENEFÍCIO </span></span>
+                        <h4>Mato Grosso Palace Hotel</h4>
+                        <p> <strong>Local: </strong>Centro de Cuiabá (Capital do estado).</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 250 a R$ 300 para duas pessoas.</p>
+                            <p> <strong>Geral: </strong>Localizado estrategicamente no coração da capital, é ideal para quem quer economizar sem abrir mão de conforto. Oferece quartos climatizados, um bom café da manhã, academia, bar e restaurante próprio. É perfeito tanto para estadias curtas quanto para turismo de negócios.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="imagem-estado">
+                <h3>Mato Grosso</h3>
+                <img id="imagemMT" src="../image/fundo-mt.jfif" alt="Mato Grosso">
+            </div>
+
+        </div>
+
+        <div class="hospedagem-tela">
+
+            <!-- MATO GROSSO DO SUL -->
+            <div class="estado-hospedagem" data-estado="MS">
+                <h3>Mato Grosso do Sul</h3>
+                <div class="hotel-lista">
+
+                    <div class="hotel-card luxo" data-img="../image/hospedagem-luxo-4.jpg">
+                        <span class="material-symbols-outlined"> star star star  <span> LUXO </span></span>
+                        <h4>Zagaia Eco Resort</h4>
+                        <p> <strong>Local: </strong>Bonito - MS (Rodovia Bonito-Três Morros, Km 0).</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 680.</p>
+                            <p> <strong>Geral: </strong>Espaço de alto padrão com infraestrutura de lazer completa, piscinas climatizadas, quadras esportivas, spa, trilhas ecológicas e restaurante com pratos regionais. É ideal para quem busca uma experiência imersiva na natureza sem abrir mão de muito conforto.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="hotel-card medio" data-img="../image/hospedagem-intermed-4.jpg">
+                        <span class="material-symbols-outlined"> star star  <span> INTERMEDIÁRIO </span></span>
+                        <h4> Hotel Deville Prime Campo Grande</h4>
+                        <p> <strong>Local: </strong> Campo Grande - MS (Av. Mato Grosso, bairro Carandá Bosque).</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 350.</p>
+                            <p> <strong>Geral: </strong> É uma das opções mais bem avaliadas da capital. Oferece excelente atendimento, quartos sofisticados, piscina externa, academia equipada, centro de convenções e café da manhã elogiado. Perfeito tanto para viagens a lazer quanto a negócios.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="hotel-card economico" data-img="../image/hospedagem-eco-4.jpg">
+                        <span class="material-symbols-outlined"> star <span> CUSTO-BENEFÍCIO </span></span>
+                        <h4>ibis budget Campo Grande</h4>
+                        <p> <strong>Local: </strong>Campo Grande - MS (Av. Nelly Martins, bairro Carandá Bosque).</p>
+
+                        <div class="hotel-detalhes">
+                            <p> <strong>Estadia Média: </strong>Diárias a partir de R$ 120.</p>
+                            <p> <strong>Geral: </strong>Possui excelente custo-benefício para quem deseja economizar na hospedagem e investir em passeios. Os quartos são funcionais, compactos e modernos, com ar-condicionado e Wi-Fi gratuito. O hotel aceita animais de estimação e está em uma área segura e acessível.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="imagem-estado">
+                <h3>Mato Grosso do Sul</h3>
+                <img id="imagemMS" src="../image/fundo-ms.webp" alt="Mato Grosso do Sul">
+            </div>
+
+        </div>
     </section>
 
     

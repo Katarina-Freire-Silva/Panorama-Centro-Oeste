@@ -976,37 +976,75 @@ section {
     pointer-events: none;
 }
 
-.hospedagem-estados{
-    width: 90%;
+/* ---------------- IMAGEM INTERATIVA DA HOSPEDAGEM ---------------- */
 
-    margin: auto;
+.hospedagem-tela{
+    width: 90%;
+    min-height: 100vh;
+
+    margin: 0 auto;
 
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(320px, 1fr));
-
-    gap: 2rem;
+    align-items: center;
 
     position: relative;
     z-index: 2;
 }
 
+.hospedagem-tela + .hospedagem-tela{
+    margin-top: 2rem;
+}
+
 .estado-hospedagem{
-    background:
-        rgba(255,255,255,.05);
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-    backdrop-filter: blur(12px);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
+.imagem-estado{
+    min-height: 650px;
     border-radius: 24px;
+    overflow: hidden;
 
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.35);
+}
+
+.imagem-estado h3{
+    display: none;
+}
+
+.imagem-estado img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: opacity .25s ease;
+}
+
+
+.hotel-card.ativo{
+    border-color: var(--cor-mostarda-claro);
+
+    box-shadow:
+        0 0 25px rgba(194,155,68,.35);
+}
+
+
+.estado-hospedagem{
+    background:rgba(255,255,255,.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 24px;
     padding: 2rem;
-
     transition: .4s;
-
     box-shadow:
         0 20px 40px rgba(0,0,0,.25);
 }
@@ -1023,10 +1061,9 @@ section {
 
 .estado-hospedagem h3{
     text-align: center;
-
-    color: var(--cor-mostarda-claro);
-
-    font-size: 1.8rem;
+    font-family: "Six Caps", sans-serif;
+    font-size: 5rem;
+    color: var(--cor-areia);
 
     margin-bottom: 2rem;
 
@@ -1036,19 +1073,67 @@ section {
         1px solid rgba(255,255,255,.1);
 }
 
-.hotel-card{
-    position: relative;
+.hotel-lista{
+    height: calc(650px - 120px);
+    overflow-y: auto;
+    width: 90%;
+    margin: 0 auto; 
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-    padding: 1.3rem;
 
-    border-radius: 18px;
+.hotel-lista::-webkit-scrollbar{
+    width: 8px;
+}
 
-    margin-bottom: 1rem;
+.hotel-lista::-webkit-scrollbar-track{
+    background: rgba(255,255,255,.05);
+    border-radius: 20px;
+}
 
-    transition: .35s;
+.hotel-lista::-webkit-scrollbar-thumb{
+    background: rgba(194,155,68,.6);
+    border-radius: 20px;
+}
 
+.hotel-detalhes{
+    max-height: 0;
+    padding-bottom: 1rem;
     overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height .4s ease,
+        opacity .3s ease,
+        margin-top .3s ease;
+}
 
+.hotel-card.aberto .hotel-detalhes{
+    max-height: 9999px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+
+.hotel-card.aberto{
+    transform: scale(1.01);
+
+    box-shadow:
+        0 0 6px rgba(194,155,68,.25);
+}
+
+.hotel-card{
+    width: 100%;
+    max-width: 95%;
+    position: relative;
+    padding: 1.3rem;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+    transition: .35s;
+    overflow: visible;
     cursor: pointer;
 }
 
@@ -1057,7 +1142,7 @@ section {
 }
 
 .hotel-card:hover{
-    transform: translateX(8px);
+    transform: scale(1.01);
 }
 
 .hotel-card span{
@@ -1143,20 +1228,24 @@ section {
 
 /* RESPONSIVO */
 
-@media (max-width: 768px){
+@media (max-width:1000px){
 
-    #turismo-hospedagem{
-        padding: 6rem 0;
-    }
-
-    #turismo-hospedagem .titulo-secao h2{
-        font-size: 6rem;
-    }
-
-    .hospedagem-estados{
+    .hospedagem-tela{
         grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .imagem-estado{
+        order: -1;
+        height: 450px;
+    }
+
+    .estado-hospedagem{
+        height: auto;
     }
 }
+
 
 /* ------------------------------- CSS DO RÁDIO ------------------------------- */
 

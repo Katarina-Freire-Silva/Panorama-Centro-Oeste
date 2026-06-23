@@ -287,6 +287,70 @@ if (grid && btnProximoDestino && btnAnteriorDestino) {
 
 }
 
+/* ---------------- HOSPEDAGEM INTERATIVA ---------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const imagens = {
+        DF: document.getElementById("imagemDF"),
+        GO: document.getElementById("imagemGO"),
+        MT: document.getElementById("imagemMT"),
+        MS: document.getElementById("imagemMS")
+    };
+
+    const cardsHotel = document.querySelectorAll(".hotel-card");
+
+    cardsHotel.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            const estadoContainer = card.closest(".estado-hospedagem");
+            const estado = estadoContainer.dataset.estado;
+
+            const imagem = imagens[estado];
+
+            /* -------- ACORDEÃO -------- */
+
+            const estavaAberto = card.classList.contains("aberto");
+
+            estadoContainer
+                .querySelectorAll(".hotel-card")
+                .forEach(c => c.classList.remove("aberto"));
+
+            if (!estavaAberto) {
+                card.classList.add("aberto");
+                setTimeout(() => {
+                    card.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest"
+                    });
+                }, 200);
+            }
+
+            /* -------- TROCA DE IMAGEM -------- */
+
+            if (!imagem) return;
+
+            estadoContainer
+                .querySelectorAll(".hotel-card")
+                .forEach(c => c.classList.remove("ativo"));
+
+            card.classList.add("ativo");
+
+            imagem.style.opacity = "0";
+
+            setTimeout(() => {
+
+                imagem.src = card.dataset.img;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+        });
+    });
+
+});
 
 /* ----------------------------- SCRIPT DO RÁDIO ------------------------------*/
 
