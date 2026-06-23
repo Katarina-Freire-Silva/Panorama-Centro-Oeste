@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
     <title>O CERRADO</title>
 </head>
 <body> 
     <header>
-        <img src="./image/logo.png" alt="Logo" class="logo">
+        <img src="./image/logo-clara.png" alt="Logo" class="logo">
         <nav>            
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
                     Home <span class="material-symbols-outlined"> keyboard_arrow_down </span>
                 </button>
                 <div class="dropdown-menu">
-                    <a href="./index.html#home-centroOeste">Centro-Oeste</a>
                     <a href="./index.html#home-historia">História</a>
+                    <a href="./index.html#home-centroOeste">Centro-Oeste</a>
                     <a href="./index.html#home-curiosidades">Curiosidades</a>
-                    <a href="./index.html#home-grandesNomes">Grandes Nomes</a>
                 </div>
             </div>
 
@@ -91,8 +91,444 @@
         </nav>
     </header>
 
-    <img src="./image/abertura-home.jpg" class="abertura-home">
-    
+    <div class="abertura-container">
+        <video
+            id="video-home"
+            src="./video/aberuta-home.mp4"
+            class="abertura-home"
+            autoplay
+            muted
+            playsinline>
+        </video>
+
+        <div class="abertura-overlay"></div>
+        
+        <div class="introducao">
+            <h1 class="animate_animated animate__fadeInUp">CENTRO-OESTE</h1>
+            <h2>Viva a esperiência que só o Cerrado pode te proporcionar. Conheça mais sobre o nosso grande e maravilhoso Brasil.</h2>
+        </div>
+        
+    </div>
+
+    <section id="home-historia" class="home-historia">
+
+        <div class="historia-slide ativo"
+            style="background-image: url('./image/historia-1.webp');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> HISTÓRIA DO </span>
+
+                <h2> CENTRO-OESTE </h2>
+
+                <p>
+                    A região <a href="https://brasilescola.uol.com.br/brasil/regiao-centro-oeste.htm">Centro-Oeste do Braisl</a>é extremamente rica em sua biodiversidade com fauna e flora encantadoras, mas você conhece a história dessa parte do Brasil? Clique nas setas para descobrir!
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-2.webp');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> ANTES DE 1500 </span>
+
+                <h2> POVOS ORIGINÁRIOS </h2>
+
+                <p>
+                    A área que atualmente compõe o Centro-Oeste brasileiro era ocupada por diversos povos indígenas, como Bororo, Xavante, Kayapó e Guarani. Esses grupos desenvolveram formas próprias de organização social, agricultura, caça, pesca e comércio, estabelecendo uma profunda relação com os biomas da região, especialmente o Cerrado e o Pantanal.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-3.png');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> SÉCULO XVI </span>
+
+                <h2> PRIMEIRAS EXPLORAÇÕES </h2>
+
+                <p>
+                    Durante o século XVI, portugueses e espanhóis realizaram as primeiras incursões pelo interior da América do Sul. Utilizando rios como vias naturais de deslocamento, essas expedições tinham como objetivo mapear territórios, buscar riquezas e expandir a influência das coroas ibéricas sobre áreas ainda pouco conhecidas.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-4.jpg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> SEGUNDA METADE DO SÉCULO XVI </span>
+
+                <h2> CHEGADA DOS BANDEIRANTES </h2>
+
+                <p>
+                    A partir da segunda metade do século XVI, os bandeirantes paulistas avançaram rumo ao interior do território brasileiro. Suas expedições buscavam capturar indígenas para escravização, localizar metais preciosos e ampliar as fronteiras efetivamente controladas por Portugal.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-5.jpg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> INÍCIO DO SÉCULO XVII </span>
+
+                <h2> DESCOBERTA DE JAZIDAS </h2>
+
+                <p>
+                    As descobertas de ouro em diferentes áreas do Centro-Oeste despertaram o interesse da Coroa Portuguesa. A perspectiva de enriquecimento acelerou a ocupação da região, atraindo aventureiros, comerciantes e trabalhadores em busca de oportunidades ligadas à mineração.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-6.jpeg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1719 </span>
+
+                <h2> FUNDAÇÃO DE CUIABÁ </h2>
+
+                <p>
+                    Em 1719, após a descoberta de importantes jazidas auríferas, Pascoal Moreira Cabral fundou Cuiabá. O povoado rapidamente se transformou em um dos principais centros urbanos da região, concentrando atividades econômicas, administrativas e comerciais relacionadas ao ciclo do ouro.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-7.jpg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1725 </span>
+
+                <h2> EXPEDIÇÃO DE ANHANGUERA </h2>
+
+                <p>
+                    Em busca de novas áreas de mineração, Bartolomeu Bueno da Silva, conhecido como Anhanguera, liderou expedições rumo ao atual território goiano. Sua jornada contribuiu para a exploração da região e para o surgimento de novos núcleos de povoamento ligados à mineração.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-8.webp');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1727 </span>
+
+                <h2> VILA BOA DE GOIÁS </h2>
+
+                <p>
+                    A fundação de Vila Boa de Goiás marcou a consolidação da ocupação portuguesa na região. Tornando-se a capital da Capitania de Goiás, a cidade passou a exercer papel fundamental na administração, no comércio e no desenvolvimento econômico local durante o século XVIII.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-9.png');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1730 - 1740 </span>
+
+                <h2> APOGEU DA MINERAÇÃO </h2>
+
+                <p>
+                    Entre as décadas de 1730 e 1740, a mineração viveu seu período de maior prosperidade. O fluxo de ouro atraiu milhares de pessoas, impulsionando a formação de cidades, a abertura de rotas comerciais e a integração gradual do Centro-Oeste ao restante da colônia.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-10.webp');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1747 </span>
+
+                <h2> CRIAÇÃO DAS CAPITANIAS </h2>
+
+                <p>
+                    Para fortalecer o controle sobre as riquezas minerais e garantir a presença portuguesa no interior, a Coroa criou as Capitanias de Goiás e Mato Grosso. A medida ampliou a administração local e reforçou a ocupação de áreas estratégicas próximas às fronteiras.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-11.png');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> FINAL DO SÉCULO XVIII </span>
+
+                <h2> DECLÍNIO DO OURO </h2>
+
+                <p>
+                    Com o esgotamento gradual das jazidas mais produtivas, a mineração entrou em declínio no final do século XVIII. Muitas localidades perderam população e importância econômica, enquanto novas atividades passaram a ganhar espaço na sustentação da região.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-12.jpg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> SÉCULO XIX </span>
+
+                <h2> EXPANSÃO DA PECUÁRIA </h2>
+
+                <p>
+                    Ao longo do século XIX, a pecuária tornou-se a principal atividade econômica do Centro-Oeste. A abundância de terras e pastagens naturais favoreceu a criação extensiva de gado, impulsionando o surgimento de fazendas e fortalecendo a ocupação do território.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-13.jpg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1864 </span>
+
+                <h2> INÍCIO DA GUERRA PARAGUAIA </h2>
+
+                <p>
+                    O início da Guerra do Paraguai transformou Mato Grosso em uma das principais áreas de conflito. Tropas paraguaias invadiram partes do território brasileiro, provocando destruição, deslocamentos populacionais e grandes desafios para a defesa da região.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-14.jpg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1870 </span>
+
+                <h2> FIM DA GUERRA PARAGUAIA </h2>
+
+                <p>
+                    O término da Guerra do Paraguai trouxe profundas consequências para o Centro-Oeste. Apesar da recuperação gradual, o conflito deixou impactos econômicos, sociais e demográficos que influenciaram o desenvolvimento regional durante as décadas seguintes.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-15.png');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> FINAL DO SÉCULO XIX </span>
+
+                <h2> POVOADOS E FRONTEIRAS </h2>
+
+                <p>
+                    No final do século XIX, o governo brasileiro incentivou a criação de novos povoados e fortaleceu a ocupação das áreas de fronteira. Essas ações buscavam garantir a soberania nacional e estimular o crescimento econômico em regiões pouco povoadas.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-16.webp');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1930 - 1937 </span>
+
+                <h2> INTEGRAÇÃO NACIONAL </h2>
+
+                <p>
+                    Durante as décadas de 1930, o governo federal passou a considerar o interior brasileiro essencial para a integração territorial do país. Novas políticas públicas buscaram melhorar a infraestrutura e promover a ocupação econômica de áreas distantes do litoral.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-17.jfif');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1938 </span>
+
+                <h2> MARCHA PARA O OESTE </h2>
+
+                <p>
+                    Em 1938, Getúlio Vargas lançou a política conhecida como Marcha para o Oeste. O programa incentivava a migração para o interior, a criação de colônias agrícolas e a expansão da presença do Estado em regiões consideradas estratégicas para o desenvolvimento nacional.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-18.jpg');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1956 </span>
+
+                <h2> CONSTRUÇÃO DE BRASÍLIA </h2>
+
+                <p>
+                    O projeto de construção de Brasília teve início em 1956 durante o governo de Juscelino Kubitschek. A nova capital foi planejada para estimular a integração do território brasileiro e promover o desenvolvimento econômico do interior do país.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-19.webp');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1960 </span>
+
+                <h2> INALGURAÇÃO DE BRASÍLIA </h2>
+
+                <p>
+                    Em 21 de abril de 1960, Brasília foi oficialmente inaugurada como a nova capital federal. A transferência do centro político nacional para o Planalto Central transformou profundamente a dinâmica econômica, populacional e urbana do Centro-Oeste.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-20.avif');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> 1970 </span>
+
+                <h2> EXPANSÃO DA FORNTEIRA AGRÍCOLA </h2>
+
+                <p>
+                    A partir da década de 1970, programas governamentais, avanços tecnológicos e investimentos em infraestrutura impulsionaram a expansão da agricultura moderna. Grandes áreas do Cerrado foram incorporadas à produção agrícola em larga escala.
+                </p>
+            </div>
+        </div>
+
+        <div class="historia-slide"
+            style="background-image: url('./image/historia-21.webp');">
+
+            <div class="historia-overlay"></div>
+
+            <div class="historia-conteudo">
+                <span class="historia-periodo"> SÉCULOS XX E XXI </span>
+
+                <h2> POTÊNCIA AGROPECUÁRIA </h2>
+
+                <p>
+                    Nos séculos XX e XXI, o Centro-Oeste consolidou-se como uma das regiões mais importantes da agropecuária brasileira. A produção de soja, milho, algodão e carne bovina tornou-se referência nacional e internacional, impulsionando a economia regional.
+                </p>
+            </div>
+        </div>
+
+        <!-- Adicione quantos slides quiser -->
+
+        <button class="historia-btn historia-anterior">
+            <span class="material-symbols-outlined"> arrow_forward_ios</span>
+        </button>
+
+        <button class="historia-btn historia-proximo">
+            <span class="material-symbols-outlined"> arrow_forward_ios</span>
+        </button>
+
+        <div class="historia-indicadores"></div>
+
+    </section>
+
+
+    <section id="home-centroOeste" class="home-centro-oeste">
+
+        <div class="titulo-secao">
+            <span class="subtitulo"> AS QUATRO REGIÕES DO </span>
+            <h2> Centro-Oeste Brasileiro </h2>
+
+            <p>
+                A Região Centro-Oeste é uma das cinco grandes regiões do Brasil. Localizada na parte central do território brasileiro, sem saída para o oceano, ela se estende por uma área de 1.606.354,09  km² e estabelece divisa internacional com a Bolívia e o Paraguai. Três estados fazem parte do Centro-Oeste, que são: Goiás, Mato Grosso e Mato Grosso do Sul. O Distrito Federal completa o quadro de unidades federativas componentes dessa região, sendo nele onde fica situada a capital federal, Brasília, que foi instalada na região Centro-Oeste na segunda metade do século XX.
+            </p>
+        </div>
+
+        <div class="estados-container">
+
+            <article class="estado-item">
+
+                <div class="estado-imagem">
+                    <img src="./image/Goias.png" alt="Goiás">
+                </div>
+
+                <div class="estado-texto">
+                    <span>ESTADO</span>
+                    <h3>Goiás</h3>
+
+                    <p>
+                        Tradição sertaneja, cidades históricas e riquezas naturais.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="estado-item invertido">
+
+                <div class="estado-imagem">
+                    <img src="./image/Mato-Grosso.png" alt="Mato Grosso">
+                </div>
+
+                <div class="estado-texto">
+                    <span>ESTADO</span>
+                    <h3>Mato Grosso</h3>
+
+                    <p>
+                        Lar do Pantanal, Amazônia e Cerrado em um único território.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="estado-item">
+
+                <div class="estado-imagem">
+                    <img src="./image/Mato-Grosso-do-Sul.png" alt="Mato Grosso do Sul">
+                </div>
+
+                <div class="estado-texto">
+                    <span>ESTADO</span>
+                    <h3>Mato Grosso do Sul</h3>
+
+                    <p>
+                        Natureza exuberante, ecoturismo e cultura fronteiriça.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+    </section>
 
     <audio id="audio-player"></audio>
 

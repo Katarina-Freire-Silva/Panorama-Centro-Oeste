@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <title>O CERRADO</title>
 </head>
-<body> 
+<body class="pagina-interna">    
     <header>
         <img src="../image/logo.png" alt="Logo" class="logo">
         <nav>            
@@ -16,10 +16,9 @@
                     Home <span class="material-symbols-outlined"> keyboard_arrow_down </span>
                 </button>
                 <div class="dropdown-menu">
-                    <a href="../index.html#home-centroOeste">Centro-Oeste</a>
                     <a href="../index.html#home-historia">História</a>
+                    <a href="../index.html#home-centroOeste">Centro-Oeste</a>
                     <a href="../index.html#home-curiosidades">Curiosidades</a>
-                    <a href="../index.html#home-grandesNomes">Grandes Nomes</a>
                 </div>
             </div>
 
@@ -93,8 +92,8 @@
 
     <section id="noticias">
         <h2>Notícias do Centro-Oeste</h2>
-    
-        <!-- Filtro por estado -->
+
+        <!-- Filtro por região/estado -->
         <div class="filtro-noticias">
             <button class="filtro-estado active" data-estado="centro-oeste">Toda a Região</button>
             <button class="filtro-estado" data-estado="df">Distrito Federal</button>
@@ -102,19 +101,20 @@
             <button class="filtro-estado" data-estado="mt">Mato Grosso</button>
             <button class="filtro-estado" data-estado="ms">Mato Grosso do Sul</button>
         </div>
-    
-        <!-- Indicador de carregamento -->
-        <div id="noticias-loading" class="noticias-loading">Carregando notícias...</div>
-    
-        <!-- Grid de notícias -->
-        <div id="noticias-grid" class="noticias-grid"></div>
-    
-        <!-- Mensagem de erro / sem resultados -->
-        <div id="noticias-erro" class="noticias-erro" style="display: none;">
-            Não foi possível carregar as notícias no momento.
-        </div>
-    </section>    
 
+        <!-- Filtro por tópico -->
+        <div class="filtro-noticias filtro-topicos">
+            <button class="filtro-estado" data-estado="politica" id="noticias-politica">Política</button>
+            <button class="filtro-estado" data-estado="economia" id="noticias-economia">Economia</button>
+            <button class="filtro-estado" data-estado="meioAmbiente" id="noticias-meioAmbiente">Meio Ambiente</button>
+            <button class="filtro-estado" data-estado="agropecuaria" id="noticias-agropecuaria">Agropecuária</button>
+        </div>
+
+        <div id="noticias-loading" class="noticias-loading">Carregando notícias...</div>
+        <div id="noticias-grid" class="noticias-grid"></div>
+        <div id="noticias-erro" class="noticias-erro" style="display: none;"></div>
+    </section>
+    
     <audio id="audio-player"></audio>
 
     <footer>

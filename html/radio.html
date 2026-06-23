@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
     <link rel="stylesheet" href="../style.css">
     <title>O CERRADO</title>
 </head>
-<body> 
+<body class="pagina-interna">    
     <header>
         <img src="../image/logo.png" alt="Logo" class="logo">
         <nav>            
@@ -17,10 +16,9 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
                     Home <span class="material-symbols-outlined"> keyboard_arrow_down </span>
                 </button>
                 <div class="dropdown-menu">
-                    <a href="../index.html#home-centroOeste">Centro-Oeste</a>
                     <a href="../index.html#home-historia">História</a>
+                    <a href="../index.html#home-centroOeste">Centro-Oeste</a>
                     <a href="../index.html#home-curiosidades">Curiosidades</a>
-                    <a href="../index.html#home-grandesNomes">Grandes Nomes</a>
                 </div>
             </div>
 
@@ -105,48 +103,10 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
                         <div class="disco-furo"></div>
                     </div>
                 </div>
-
-                <!-- Informações da música -->
-                <div class="musica-info">
-                    <h3 id="info-titulo">Selecione uma música</h3>
-                    <p id="info-artista">Artista: --</p>
-                    <p id="info-ano">Lançamento: --</p>
-                </div>
-
-                <!-- Controles -->
-                <div class="player-controls">
-                    <button id="btn-anterior" title="Anterior">
-                        <span class="material-symbols-outlined"> skip_previous </span>
-                    </button>
-                    <button id="btn-play" title="Tocar/Pausar">
-                        <span class="material-symbols-outlined">play_arrow</span>
-                    </button>
-                    <button id="btn-proximo" title="Próxima">
-                        <span class="material-symbols-outlined"> skip_next </span>
-                    </button>
-                </div>
-
-                <!-- Barra de progresso -->
-                <div class="progress-container">
-                    <span id="tempo-atual">0:00</span>
-                    <input type="range" id="progress-bar" value="0" min="0" max="100">
-                    <span id="tempo-total">0:00</span>
-                </div>
-
-                <!-- Volume -->
-                <div class="volume-container">
-                    <label for="volume">
-                        <span class="material-symbols-outlined"> volume_up </span>
-                    </label>
-                    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
-                </div>
-
             </div>
 
             <!-- Lado direito: filtros e lista -->
             <div class="radio-filtros">
-                <h3>Selecionar música</h3>
-
                 <div class="filtro-grupo">
                     <label for="filtro-artista">Artista:</label>
                     <select id="filtro-artista">
@@ -158,19 +118,52 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
                         <option value="">Todos</option>
                     </select>
 
-                    <button id="btn-filtrar">Buscar músicas</button>
+                    <button id="btn-filtrar">
+                        <span class="material-symbols-outlined"> search </span>
+                    </button>
                 </div>
                 
                     <!-- NOVO: Cartão fixo da música tocando agora -->
                 <div class="tocando-agora-fixo">
-                    <span class="material-symbols-outlined"> headphones </span>                    
-                    <div class="tocando-agora-texto">
-                        <strong id="fixo-titulo">Nenhuma música selecionada</strong>
-                        <span id="fixo-artista">--</span>
+
+                    <div class="musica-info">
+                        <span class="material-symbols-outlined"> headphones </span>                    
+                        <h3 id="info-titulo">Selecione uma música</h3>
+                        <p id="info-artista">--</p>
+                        <p id="info-ano">--</p>
+                    </div>
+
+                    <!-- Controles -->
+                    <div class="player-controls">
+                        <button id="btn-anterior" title="Anterior">
+                            <span class="material-symbols-outlined"> skip_previous </span>
+                        </button>
+                        <button id="btn-play" title="Tocar/Pausar">
+                            <span class="material-symbols-outlined">play_arrow</span>
+                        </button>
+                        <button id="btn-proximo" title="Próxima">
+                            <span class="material-symbols-outlined"> skip_next </span>
+                        </button>
+                    </div>
+
+                    <!-- Barra de progresso -->
+                    <div class="progress-container">
+                        <span id="tempo-atual">0:00</span>
+                        <input type="range" id="progress-bar" value="0" min="0" max="100">
+                        <span id="tempo-total">0:00</span>
                     </div>
                 </div>
 
-                    <!-- Container com rolagem interna -->
+                 <!-- Volume -->
+                <div class="volume-container">
+                    <label for="volume">
+                        <span class="material-symbols-outlined"> volume_up </span>
+                    </label>
+
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+                </div>
+
+                <!-- Container com rolagem interna -->
                 <div class="lista-musicas-wrapper">
                     <ul id="lista-musicas"></ul>
                 </div>
@@ -178,6 +171,7 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
         </div>
     </section>
     <audio id="audio-player"></audio>
+
 
     <footer>
         
