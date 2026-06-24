@@ -82,7 +82,7 @@ body {
 }
 
 main.pagina-interna {
-    padding: 8rem 0;
+    padding: 8em 0;
 }
 
 /* ================================================================
@@ -301,7 +301,7 @@ nav {
 
     overflow: hidden;
 
-    padding: 8rem 0;
+    padding: 8em 0;
 
     background:
         linear-gradient(
@@ -371,14 +371,14 @@ nav {
 
     letter-spacing: 4px;
 
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 .titulo-secao h2 {
 
     font-family: "Six Caps", sans-serif;
 
-    font-size: 10rem;
+    font-size: 10em;
 
     line-height: .9;
 
@@ -393,7 +393,7 @@ nav {
 
     font-family: "Six Caps", sans-serif;
 
-    font-size: 5rem;
+    font-size: 5em;
 
     line-height: .9;
 
