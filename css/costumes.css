@@ -1,0 +1,303 @@
+/* ------------------------------ CSS DOS COSTUMES ------------------------------*/
+
+/* ===================== SEÇÃO PRINCIPAL ===================== */
+
+.costumes {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(180deg, #111111 0%, #1b1b1b 40%, #242424 100%);
+    padding-top: 300px;
+    overflow: hidden;
+}
+
+.costumes::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    pointer-events: none;
+}
+
+.costumes::after {
+    content: "";
+    position: absolute;
+    bottom: -250px;
+    right: -250px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(86,102,56,.20) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.costumes .titulo-secao {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 4em auto;
+}
+
+/* ===================== GÍRIAS ===================== */
+
+#costumes-girias {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.girias-intro {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    color: var(--cor-areia);
+    line-height: 1.8;
+    font-size: 1.05em;
+    opacity: .85;
+}
+
+/* Grid de gírias */
+
+.girias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.giria-card {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    padding: 28px 22px;
+    backdrop-filter: blur(10px);
+    transition: .3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.giria-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cor-verde-oliva), var(--cor-ocre));
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.giria-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,.08);
+    border-color: rgba(107,124,58,.4);
+}
+
+.giria-card:hover::before {
+    opacity: 1;
+}
+
+.giria-termo {
+    font-family: "Six Caps", sans-serif;
+    font-size: 2.2em;
+    color: var(--cor-ocre);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.giria-definicao {
+    font-size: .9em;
+    color: var(--cor-areia);
+    line-height: 1.6;
+    opacity: .85;
+    margin-bottom: 14px;
+}
+
+.giria-exemplo {
+    font-size: .82em;
+    color: var(--cor-verde-menta);
+    font-style: italic;
+    padding: 8px 12px;
+    background: rgba(107,124,58,.15);
+    border-left: 2px solid var(--cor-verde-oliva);
+    border-radius: 0 6px 6px 0;
+    line-height: 1.5;
+}
+
+/* ===================== INFLUÊNCIAS LINGUÍSTICAS ===================== */
+
+#costumes-lingua {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,.2);
+}
+
+.lingua-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lingua-card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 16px;
+    padding: 32px;
+    transition: .3s ease;
+}
+
+.lingua-card:hover {
+    background: rgba(255,255,255,.07);
+    transform: translateX(6px);
+}
+
+.lingua-icone {
+    font-size: 2.2em;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(107,124,58,.2);
+    border-radius: 12px;
+}
+
+.lingua-conteudo h4 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 1.8em;
+    color: var(--cor-ocre);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.lingua-conteudo p {
+    font-size: .9em;
+    color: var(--cor-areia);
+    line-height: 1.7;
+    opacity: .85;
+}
+
+/* ===================== FESTAS TRADICIONAIS ===================== */
+
+#costumes-festas {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.festas-intro {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    color: var(--cor-areia);
+    line-height: 1.8;
+    font-size: 1.05em;
+    opacity: .85;
+}
+
+.festas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.festa-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .4s ease;
+    position: relative;
+}
+
+.festa-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    border-color: rgba(107,124,58,.3);
+}
+
+.festa-imagem {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+}
+
+.festa-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.festa-card:hover .festa-imagem img {
+    transform: scale(1.05);
+}
+
+.festa-imagem-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,.7) 100%);
+}
+
+.festa-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 5px 14px;
+    background: var(--cor-verde-oliva);
+    color: var(--cor-areia);
+    font-size: .75em;
+    font-weight: 600;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.festa-info {
+    padding: 28px;
+}
+
+.festa-info h4 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 2em;
+    color: var(--cor-areia);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.festa-info p {
+    font-size: .9em;
+    color: var(--cor-areia);
+    line-height: 1.7;
+    opacity: .8;
+}
+
+.festa-destaque {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.festa-destaque .festa-imagem {
+    height: 100%;
+    min-height: 320px;
+}
+
+/* ===================== DIVISOR DE SEÇÕES ===================== */
+
+.divisor-secao {
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
+    margin: 0 auto;
+}

@@ -1,0 +1,470 @@
+/* ------------------------------ CSS DA CULTURA ------------------------------*/
+
+/* ===================== SEÇÃO PRINCIPAL ===================== */
+
+.cultura {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(180deg, #111111 0%, #1b1b1b 40%, #242424 100%);
+    padding-top: 300px;
+    overflow: hidden;
+}
+
+.cultura::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    pointer-events: none;
+}
+
+.cultura::after {
+    content: "";
+    position: absolute;
+    bottom: -250px;
+    right: -250px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(86,102,56,.20) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.cultura .titulo-secao {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 4em auto;
+}
+
+/* ===================== DIVISOR ===================== */
+
+.divisor-secao {
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
+    margin: 0 auto;
+}
+
+/* ===================== INTRO COMPARTILHADA ===================== */
+
+.secao-intro {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    color: var(--cor-areia);
+    line-height: 1.8;
+    font-size: 1.05em;
+    opacity: .85;
+}
+
+/* ===================== DANÇAS TÍPICAS ===================== */
+
+#cultura-danca {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.dancas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.danca-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .4s ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.danca-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    border-color: rgba(107,124,58,.3);
+}
+
+.danca-imagem {
+    overflow: hidden;
+    position: relative;
+}
+
+.danca-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.danca-card:hover .danca-imagem img {
+    transform: scale(1.06);
+}
+
+.danca-info {
+    padding: 30px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.danca-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: rgba(107,124,58,.25);
+    border: 1px solid rgba(107,124,58,.4);
+    color: var(--cor-verde-menta);
+    font-size: .75em;
+    font-weight: 600;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: fit-content;
+}
+
+.danca-info h4 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 2.2em;
+    color: var(--cor-areia);
+    line-height: 1;
+}
+
+.danca-info p {
+    font-size: .88em;
+    color: var(--cor-areia);
+    line-height: 1.7;
+    opacity: .8;
+}
+
+/* ===================== MÚSICA ===================== */
+
+#cultura-musica {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,.2);
+}
+
+.musica-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.musica-imagem {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 25px 60px rgba(0,0,0,.35);
+}
+
+.musica-imagem img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.musica-imagem:hover img {
+    transform: scale(1.04);
+}
+
+.musica-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.musica-conteudo p {
+    font-size: .95em;
+    color: var(--cor-areia);
+    line-height: 1.8;
+    opacity: .85;
+}
+
+.musica-artistas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.artista-tag {
+    padding: 7px 18px;
+    background: rgba(200,146,58,.15);
+    border: 1px solid rgba(200,146,58,.3);
+    color: var(--cor-ocre);
+    font-size: .82em;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+/* ===================== GASTRONOMIA (placeholder futuro) ===================== */
+
+#cultura-gastronomia {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===================== LITERATURA ===================== */
+
+#cultura-literatura {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,.2);
+}
+
+.literatura-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.escritor-card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s ease;
+    position: relative;
+}
+
+.escritor-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cor-ocre), var(--cor-mostarda));
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.escritor-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,.07);
+    border-color: rgba(200,146,58,.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+.escritor-card:hover::after {
+    opacity: 1;
+}
+
+.escritor-imagem {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.escritor-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform .5s ease;
+}
+
+.escritor-card:hover .escritor-imagem img {
+    transform: scale(1.05);
+}
+
+.escritor-info {
+    padding: 28px;
+}
+
+.escritor-periodo {
+    font-size: .75em;
+    color: var(--cor-ocre);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.escritor-info h4 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 2em;
+    color: var(--cor-areia);
+    line-height: 1;
+    margin-bottom: 14px;
+}
+
+.escritor-info p {
+    font-size: .88em;
+    color: var(--cor-areia);
+    line-height: 1.7;
+    opacity: .8;
+}
+
+.escritor-origem {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 5px 12px;
+    background: rgba(107,124,58,.15);
+    border-radius: 20px;
+    font-size: .78em;
+    color: var(--cor-verde-menta);
+}
+
+/* ===================== ARTESANATO ===================== */
+
+#cultura-artesanato {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.artesanato-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.artesanato-imagem {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 25px 60px rgba(0,0,0,.35);
+}
+
+.artesanato-imagem img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.artesanato-imagem:hover img {
+    transform: scale(1.04);
+}
+
+.artesanato-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.artesanato-conteudo p {
+    font-size: .95em;
+    color: var(--cor-areia);
+    line-height: 1.8;
+    opacity: .85;
+}
+
+.materiais-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.material-tag {
+    padding: 6px 16px;
+    background: rgba(107,124,58,.15);
+    border: 1px solid rgba(107,124,58,.3);
+    color: var(--cor-verde-menta);
+    font-size: .8em;
+    border-radius: 20px;
+}
+
+/* ===================== FOLCLORE E LENDAS ===================== */
+
+#cultura-folclore {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,.2);
+}
+
+.lendas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.lenda-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s ease;
+}
+
+.lenda-card:hover {
+    transform: translateX(6px);
+    background: rgba(255,255,255,.07);
+    border-color: rgba(200,146,58,.2);
+}
+
+.lenda-imagem {
+    overflow: hidden;
+}
+
+.lenda-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+    filter: sepia(.3) contrast(1.1);
+}
+
+.lenda-card:hover .lenda-imagem img {
+    transform: scale(1.06);
+    filter: sepia(0) contrast(1);
+}
+
+.lenda-conteudo {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lenda-origem {
+    font-size: .75em;
+    color: var(--cor-laranja);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.lenda-conteudo h4 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 2em;
+    color: var(--cor-areia);
+    line-height: 1;
+}
+
+.lenda-conteudo p {
+    font-size: .86em;
+    color: var(--cor-areia);
+    line-height: 1.7;
+    opacity: .78;
+}

@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/cultura.css">
     <link rel="stylesheet" href="../style.css">
-    <title>Panorama Centro-Oeste</title>
+    <title>Cultura — Panorama Centro-Oeste</title>
 </head>
-<body class="pagina-interna">    
+<body class="pagina-interna">
+
     <header>
         <img src="../image/logo-clara.png" alt="Logo" class="logo">
-        <nav>            
+        <nav>
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
-                    Home <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                    Home <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
                 <div class="dropdown-menu">
                     <a href="../index.html#home-historia">História</a>
@@ -26,7 +25,7 @@
 
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
-                    Notícias <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                    Notícias <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
                 <div class="dropdown-menu">
                     <a href="./noticias.html#noticias-cc">Clima e Cotação</a>
@@ -37,7 +36,7 @@
 
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
-                    Costumes <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                    Costumes <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
                 <div class="dropdown-menu">
                     <a href="./costumes.html#costumes-girias">Gírias Tradicionais</a>
@@ -48,11 +47,11 @@
 
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
-                    Cultura <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                    Cultura <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
                 <div class="dropdown-menu">
                     <a href="./cultura.html#cultura-danca">Danças Típicas</a>
-                    <a href="./cultura.html#cultura-gastronomia">Gastronomia</a>
+                    <a href="./cultura.html#cultura-musica">Música</a>
                     <a href="./cultura.html#cultura-literatura">Literatura</a>
                     <a href="./cultura.html#cultura-folclore">Folclore e Lendas</a>
                 </div>
@@ -60,7 +59,7 @@
 
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
-                    Turismo <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                    Turismo <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
                 <div class="dropdown-menu">
                     <a href="./turismo.html#turismo-roteiros">Roteiros</a>
@@ -70,7 +69,7 @@
 
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
-                    Natureza <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+                    Natureza <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
                 <div class="dropdown-menu align-right">
                     <a href="./natureza.html#natureza-fauna">Fauna</a>
@@ -84,10 +83,342 @@
         </nav>
     </header>
 
-    
+    <!-- ===================== WRAPPER PRINCIPAL ===================== -->
+    <div class="cultura">
+
+        <!-- TÍTULO GERAL DA PÁGINA -->
+        <div class="titulo-secao">
+            <span class="subtitulo">ALMA DO CENTRO-OESTE</span>
+            <h2>Cultura &amp;<br>Tradições</h2>
+            <p>
+                A região Centro-Oeste possui uma rica diversidade de manifestações culturais,
+                expressas por meio de danças, músicas, literatura e costumes que representam
+                a identidade de sua população — fruto de heranças indígenas, africanas,
+                portuguesas, espanholas e de estados vizinhos.
+            </p>
+        </div>
+
+        <!-- ==================== DANÇAS TÍPICAS ==================== -->
+        <section id="cultura-danca">
+
+            <div class="secao-titulo">
+                <span>O corpo que conta histórias</span>
+                <h3 class="pequeno">Danças Típicas</h3>
+            </div>
+
+            <p class="secao-intro">
+                Realizadas durante as festas tradicionais, as danças típicas da região Centro-Oeste
+                possuem características de outras regiões brasileiras, das populações tradicionais
+                e, ainda, dos europeus e africanos que ajudaram a moldar essa cultura única.
+            </p>
+
+            <div class="dancas-grid">
+
+                <div class="danca-card">
+                    <div class="danca-imagem">
+                        <img src="https://static.todamateria.com.br/upload/ca/ti/catira-0-cke.jpg" alt="Catira">
+                    </div>
+                    <div class="danca-info">
+                        <span class="danca-tag">Goiás · Mato Grosso</span>
+                        <h4>Catira</h4>
+                        <p>Dança tradicional dos tropeiros e boiadeiros, realizada em duplas com os participantes frente a frente. Ao som de uma viola, dançam, pulam e batem palmas em sincronia perfeita.</p>
+                    </div>
+                </div>
+
+                <div class="danca-card">
+                    <div class="danca-imagem">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Grupo_Flor_Ribeirinha.20.jpg/500px-Grupo_Flor_Ribeirinha.20.jpg" alt="Siriri">
+                    </div>
+                    <div class="danca-info">
+                        <span class="danca-tag">Mato Grosso</span>
+                        <h4>Siriri</h4>
+                        <p>Dança de influência portuguesa e indígena em que homens, mulheres e crianças dançam ao som da viola. Os homens usam chapéus com fitas; as mulheres, amplos vestidos coloridos.</p>
+                    </div>
+                </div>
+
+                <div class="danca-card">
+                    <div class="danca-imagem">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCJ0E7rFvUxuW2ZP2XeWijepEgf8gE9-nAhfwed1v5_jn2J50UakccWaDzRGMZqFwb6wNrkWbWn51Nwv94H_flozbZWMzeWa9qzbRqQg-c9AalYfLUlLRW9MRLanYpi192zveOJ7A1orxV/s1600/cururu.jpg" alt="Cururu">
+                    </div>
+                    <div class="danca-info">
+                        <span class="danca-tag">Mato Grosso</span>
+                        <h4>Cururu</h4>
+                        <p>Dança realizada apenas por homens, dispostos em círculo, que tocam viola e realizam repentes com temáticas diversas — uma das expressões mais autênticas da cultura matogrossense.</p>
+                    </div>
+                </div>
+
+                <div class="danca-card">
+                    <div class="danca-imagem">
+                        <img src="https://www3.seduc.mt.gov.br/documents/8125245/13353437/PLURALIDADE+02/b9781732-c1e2-df28-9d66-e59301f02307?t=1574888847621+&imageThumbnail=3" alt="Chupim">
+                    </div>
+                    <div class="danca-info">
+                        <span class="danca-tag">Mato Grosso do Sul</span>
+                        <h4>Chupim</h4>
+                        <p>Dança típica do Mato Grosso do Sul, com forte influência paraguaia e espanhola. É uma dança de pares cujos movimentos lembram os do pássaro chupim, origem do nome.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="divisor-secao"></div>
+
+        <!-- ==================== MÚSICA ==================== -->
+        <section id="cultura-musica">
+
+            <div class="secao-titulo">
+                <span>Do sertanejo ao rock de Brasília</span>
+                <h3 class="pequeno">Música</h3>
+            </div>
+
+            <div class="musica-wrapper">
+
+                <div class="musica-imagem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJTftJ_OpqzJJNPjMD6WztNTS6fTIv31GDFsONtWM0R91GxE9ARthvpfxL&s=10" alt="Música do Centro-Oeste">
+                </div>
+
+                <div class="musica-conteudo">
+                    <p>
+                        A música da região Centro-Oeste é composta por diversos gêneros, sendo o
+                        <strong>sertanejo</strong> e a <strong>moda de viola</strong> os mais populares.
+                        Ambos os ritmos apresentam forte influência da guarânia, gênero musical
+                        originário do Paraguai.
+                    </p>
+                    <p>
+                        A região foi responsável por revelar grandes nomes da música brasileira:
+                        desde pioneiros como Almir Sater e a dupla Pena Branca &amp; Xavantinho,
+                        que eternizaram a viola caipira, até Marília Mendonça, que revolucionou
+                        o sertanejo feminino, e Luan Santana, que marcou a música contemporânea.
+                    </p>
+                    <p>
+                        Brasília também teve papel fundamental no <strong>rock e no punk</strong>
+                        brasileiros, ao revelar na década de 1980 bandas que hoje são referências
+                        em seus estilos musicais.
+                    </p>
+                    <div class="musica-artistas">
+                        <span class="artista-tag">Almir Sater</span>
+                        <span class="artista-tag">Pena Branca &amp; Xavantinho</span>
+                        <span class="artista-tag">Marília Mendonça</span>
+                        <span class="artista-tag">Luan Santana</span>
+                        <span class="artista-tag">Rock de Brasília</span>
+                        <span class="artista-tag">Guarânia</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="divisor-secao"></div>
+
+        <!-- ==================== LITERATURA ==================== -->
+        <section id="cultura-literatura">
+
+            <div class="secao-titulo">
+                <span>Palavras que constroem identidade</span>
+                <h3 class="pequeno">Literatura</h3>
+            </div>
+
+            <p class="secao-intro">
+                A literatura brasileira recebeu enormes contribuições de escritores e poetas que
+                nasceram ou passaram a maior parte de suas vidas nos estados da região Centro-Oeste,
+                eternizando paisagens, memórias e o espírito de seu povo.
+            </p>
+
+            <div class="literatura-grid">
+
+                <div class="escritor-card">
+                    <div class="escritor-imagem">
+                        <img src="https://www.folhaunica.com.br/wp-content/uploads/2022/05/texto-folha-175.jpg" alt="Escritores do Centro-Oeste">
+                    </div>
+                    <div class="escritor-info">
+                        <div class="escritor-periodo">1889 – 1985</div>
+                        <h4>Cora Coralina</h4>
+                        <p>
+                            Nascida na cidade de Goiás (GO), foi uma das maiores poetas do país.
+                            Publicou seu primeiro livro aos 75 anos, eternizando a vida doce e
+                            simples nos becos goianos com uma poesia de rara sensibilidade.
+                        </p>
+                        <span class="escritor-origem">📍 Cidade de Goiás, GO</span>
+                    </div>
+                </div>
+
+                <div class="escritor-card">
+                    <div class="escritor-imagem">
+                        <img src="https://www.folhaunica.com.br/wp-content/uploads/2022/05/texto-folha-175.jpg" alt="Manoel de Barros">
+                    </div>
+                    <div class="escritor-info">
+                        <div class="escritor-periodo">1916 – 2014</div>
+                        <h4>Manoel de Barros</h4>
+                        <p>
+                            Nascido em Cuiabá (MT), foi um dos principais poetas contemporâneos
+                            lúdicos do Brasil. Ficou conhecido por seus neologismos e por enaltecer
+                            as coisas simples, como o "nada" — transformando o ordinário em poesia.
+                        </p>
+                        <span class="escritor-origem">📍 Cuiabá, MT</span>
+                    </div>
+                </div>
+
+                <div class="escritor-card">
+                    <div class="escritor-imagem">
+                        <img src="https://www.folhaunica.com.br/wp-content/uploads/2022/05/texto-folha-175.jpg" alt="Miguel Jorge">
+                    </div>
+                    <div class="escritor-info">
+                        <div class="escritor-periodo">1933 –</div>
+                        <h4>Miguel Jorge</h4>
+                        <p>
+                            Natural de Campo Grande (MS), é poeta, romancista e dramaturgo.
+                            Ocupa uma cadeira na Academia Goiana de Letras e foi um dos fundadores
+                            do Festival de Cinema Fest Cine Goiânia, com dezenas de obras publicadas.
+                        </p>
+                        <span class="escritor-origem">📍 Campo Grande, MS</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="divisor-secao"></div>
+
+        <!-- ==================== ARTESANATO ==================== -->
+        <section id="cultura-artesanato">
+
+            <div class="secao-titulo">
+                <span>Mãos que guardam memória</span>
+                <h3 class="pequeno">Artesanato</h3>
+            </div>
+
+            <div class="artesanato-wrapper">
+
+                <div class="artesanato-imagem">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeZJEX3NK1KlGuoSs6CVTNghGoslKwybG0XSkttGsSAqfoK2rFFdjqvXIG0BzPqJ67fegRSBuCUdI-f486UQmcyj2g1k_B19ZKJlKDugWzOMazVBZnXPxnNwSp7NUMdYknelJQZe07MoJ-ZnwCEE-NkXH4?key=m3pteRvXE9Fa2kjiupWKYA" alt="Artesanato do Centro-Oeste">
+                </div>
+
+                <div class="artesanato-conteudo">
+                    <p>
+                        Os artesanatos são expressões artísticas fundamentais da região Centro-Oeste.
+                        Bonecas de cerâmica, acessórios feitos de matérias-primas naturais e esculturas
+                        de madeira contam a história de um povo diverso e criativo.
+                    </p>
+                    <p>
+                        É por meio dessas produções que parte da população — principalmente os
+                        <strong>povos indígenas</strong> — expressa sua cultura e obtém renda,
+                        mantendo vivas tradições milenares transmitidas de geração em geração.
+                    </p>
+                    <p>
+                        Os trabalhos são produzidos a partir de uma grande variedade de materiais
+                        naturais da própria região, valorizando o que o Cerrado e o Pantanal oferecem.
+                    </p>
+                    <div class="materiais-lista">
+                        <span class="material-tag">Madeira</span>
+                        <span class="material-tag">Barro cozido</span>
+                        <span class="material-tag">Folhas</span>
+                        <span class="material-tag">Fibras</span>
+                        <span class="material-tag">Sementes</span>
+                        <span class="material-tag">Palhas</span>
+                        <span class="material-tag">Lãs</span>
+                        <span class="material-tag">Couro</span>
+                        <span class="material-tag">Argila</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="divisor-secao"></div>
+
+        <!-- ==================== FOLCLORE E LENDAS ==================== -->
+        <section id="cultura-folclore">
+
+            <div class="secao-titulo">
+                <span>Mitos que habitam o sertão</span>
+                <h3 class="pequeno">Folclore e Lendas</h3>
+            </div>
+
+            <p class="secao-intro">
+                A região Centro-Oeste possui diversas lendas e mitos folclóricos que refletem
+                a natureza local — os grandes rios, as matas cerradas, a fauna exuberante
+                e as minas de ouro que marcaram a história do interior do Brasil.
+            </p>
+
+            <div class="lendas-grid">
+
+                <div class="lenda-card">
+                    <div class="lenda-imagem">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRvqfTVDguWbNXONpROsUp1AVMc3q9TXFj0eIoSAwkBq4w158CMYlIgj0&s=10" alt="Romãozinho">
+                    </div>
+                    <div class="lenda-conteudo">
+                        <div class="lenda-origem">Goiás</div>
+                        <h4>Romãozinho</h4>
+                        <p>
+                            Menino conhecido por suas maldades, Romãozinho comeu o almoço do pai
+                            e culpou a mãe. Descoberto, foi amaldiçoado por ela: jamais morreria
+                            e não teria lugar nem no céu nem no inferno. Desde então, vaga pelas
+                            estradas de Goiás assustando quem cruza seu caminho.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lenda-card">
+                    <div class="lenda-imagem">
+                        <img src="https://static.todamateria.com.br/upload/ma/ed/maedoouro.jpg" alt="Mãe-do-Ouro">
+                    </div>
+                    <div class="lenda-conteudo">
+                        <div class="lenda-origem">Minas e Sertão</div>
+                        <h4>Mãe-do-Ouro</h4>
+                        <p>
+                            Bela mulher que protege as jazidas de ouro e tesouros escondidos no
+                            sertão. Auxiliou um homem escravizado a encontrar ouro, mas exigiu
+                            segredo. Quando ele revelou o local sob tortura, um deslizamento
+                            soterrou a todos — inclusive o senhor cruel.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lenda-card">
+                    <div class="lenda-imagem">
+                        <img src="https://static.todamateria.com.br/upload/pe/de/pedegarrafalenda.jpg" alt="Pé de Garrafa">
+                    </div>
+                    <div class="lenda-conteudo">
+                        <div class="lenda-origem">Florestas do Centro-Oeste</div>
+                        <h4>Pé de Garrafa</h4>
+                        <p>
+                            Criatura coberta de pelos, com pés em formato de garrafa, que vaga
+                            pelas matas emitindo sons agudos para atrair caçadores. Seu único
+                            ponto fraco é o umbigo branco. Quem o desafiar tem a alma aprisionada
+                            numa garrafa — ou é morto pela criatura.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lenda-card">
+                    <div class="lenda-imagem">
+                        <img src="https://static.todamateria.com.br/upload/mi/nh/minhocao-0-cke.jpg" alt="Minhocão do Pari">
+                    </div>
+                    <div class="lenda-conteudo">
+                        <div class="lenda-origem">Rio Cuiabá, MT</div>
+                        <h4>Minhocão do Pari</h4>
+                        <p>
+                            Enorme criatura semelhante a uma cobra que vigiava o Rio Cuiabá.
+                            Tão grande que ribeirinhos a confundiam com um tronco ao atravessar
+                            o rio à noite. Furava canoas de pescadores na época da reprodução dos
+                            peixes. Dizem que desapareceu após a grande enchente de 1974.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
     <audio id="audio-player"></audio>
 
-    <footer>  
+    <footer>
         <p>
             Desenvolvido por: Katarina Freire Silva, Luis Felipe Novais Conrado, Manuela Teixeira de Oliveira, Rodrigo Ramos Ribeiro, Sarah da Conceição Lamas Bento.
         </p>
@@ -95,9 +426,8 @@
             Copyright © 2026 - Panorama Centro-Oeste. Todos os direitos reservados. Taboão da Serra, São Paulo - Brasil.
         </p>
     </footer>
+
+    <script src="../js/radio.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="../js/cultura.js"></script>
-<script src="../js/radio.js"></script>
-<script src="../script.js"></script>
