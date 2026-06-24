@@ -10,14 +10,10 @@
 #turismo-roteiros,
 #turismo-hospedagem{
     width: 100%;
-}
-
-#turismo-roteiros,
-#turismo-hospedagem{
-    width: 100vw;
     margin:0;
 }
 
+#turismo-hospedagem .titulo-secao,
 #turismo-roteiros .titulo-secao{
     text-align: center;
     max-width: 1000px;
@@ -110,9 +106,8 @@
     margin: auto;
 }
 
-section {
+.turismo-centro-oeste section {
     width: 100%;
-    align-items: center;
     margin: 0 auto;
 }
 
@@ -315,7 +310,7 @@ section {
 .destino-info h4{
     font-size:0.9rem;
 
-    color:var(--cor-preto);
+    color:var(--cor-texto-escuro);
 
     margin-bottom:.8rem;
 }
@@ -717,7 +712,7 @@ section {
             rgba(0,0,0,.55),
             rgba(0,0,0,.65)
         ),
-        url("./image/fundo-turismo.jpg");
+        url("../image/fundo-turismo.jpg");
 
     background-size: cover;
     background-position: center;
@@ -751,3 +746,50 @@ section {
     text-align: center;
 }
 
+
+/* ==========================================================
+   PROTEÇÃO CONTRA CONFLITOS COM OUTRAS PÁGINAS
+   ========================================================== */
+
+
+.turismo-centro-oeste {
+    position: relative;
+    z-index: 1;
+}
+
+.turismo-centro-oeste * {
+    box-sizing: border-box;
+}
+
+/* Evita scroll horizontal causado por animações */
+#turismo-roteiros,
+#turismo-hospedagem,
+.hero-turismo {
+    overflow-x: hidden;
+}
+
+/* Responsividade extra */
+
+@media (max-width: 768px){
+
+    #map{
+        height: 500px;
+    }
+
+    .destino-btn{
+        display:none;
+    }
+
+    .hotel-lista{
+        width:100%;
+        padding-right:.5rem;
+    }
+
+    .estado-hospedagem h3{
+        font-size:3.5rem;
+    }
+
+    .hero-turismo{
+        background-attachment:scroll;
+    }
+}

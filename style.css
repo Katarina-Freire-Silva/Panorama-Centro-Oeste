@@ -1,54 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Six+Caps&display=swap');
 
 .inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-/* FONTE DO TÍTULO DA HOME (CENTRO-OESTE)*/
+/* FONTE DO TÍTULO */
+
 .six-caps-regular {
-  font-family: "Six Caps", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Six Caps", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
 
 /* ================================================================
    PALETA DE CORES — SITE DO CENTRO-OESTE
-   ================================================================ */
+================================================================ */
 
 :root {
-    --cor-siena:        #A0522D;
-    --cor-terracota:    #C1440E;
-    --cor-ocre:         #C8923A;
-    --cor-mostarda:     #D4A017;
-    --cor-areia:        #F2E0C8;
 
-    --cor-verde-oliva:  #6B7C3A;
-    --cor-verde-musgo:  #4A5E2F;
-    --cor-verde-claro:  #8FA84E;
-    --cor-verde-menta:  #C5D89A;
+    --cor-siena:         #A0522D;
+    --cor-terracota:     #C1440E;
+    --cor-ocre:          #C8923A;
+    --cor-mostarda:      #D4A017;
+    --cor-mostarda-claro:#E4BF57;
+    --cor-areia:         #F2E0C8;
 
-    --cor-azul-ceu:     #4A90C4;
-    --cor-azul-profundo:#2C6A9A;
-    --cor-azul-claro:   #A8D4F0;
-    --cor-azul-mist:    #D6ECFA;
+    --cor-verde-oliva:   #6B7C3A;
+    --cor-verde-musgo:   #4A5E2F;
+    --cor-verde-claro:   #8FA84E;
+    --cor-verde-menta:   #C5D89A;
 
-    --cor-laranja:      #E8732A;
-    --cor-laranja-suave:#F0A56A;
-    --cor-amarelo:      #F5C400;
-    --cor-amarelo-palha:#FAE29A;
+    --cor-azul-ceu:      #4A90C4;
+    --cor-azul-profundo: #2C6A9A;
+    --cor-azul-claro:    #A8D4F0;
+    --cor-azul-mist:     #D6ECFA;
 
-    --cor-texto-escuro: #1E1E1E;
-    --cor-texto-medio:  #4A4A4A;
-    --cor-texto-suave:  #7A7A7A;
-    --cor-fundo-neutro: #FAFAF8;
-    --cor-divisor:      #E0D5C5;
+    --cor-laranja:       #E8732A;
+    --cor-laranja-suave: #F0A56A;
+    --cor-amarelo:       #F5C400;
+    --cor-amarelo-palha: #FAE29A;
+
+    --cor-texto-escuro:  #1E1E1E;
+    --cor-texto-medio:   #4A4A4A;
+    --cor-texto-suave:   #7A7A7A;
+
+    --cor-fundo-neutro:  #FAFAF8;
+    --cor-divisor:       #E0D5C5;
+
+    --cor-preto:         #000000;
+
+    --altura-header:     90px;
+    --altura-footer:     120px;
 }
 
-
-/* ------------------- CSS Geral para o site do Centro-Oeste ------------------*/
+/* ================================================================
+   RESET E CONFIGURAÇÕES GERAIS
+================================================================ */
 
 * {
     margin: 0;
@@ -58,7 +67,29 @@
     font-family: "Inter", sans-serif;
 }
 
-.logo{
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    color: var(--cor-texto-escuro);
+}
+
+main.pagina-interna {
+    padding: 8rem 0;
+}
+
+/* ================================================================
+   ELEMENTOS GERAIS
+================================================================ */
+
+.logo {
     width: 13%;
 }
 
@@ -68,68 +99,12 @@
         'wght' 200,
         'GRAD' 0,
         'opsz' 30;
+
     font-size: 20px;
-    transition: transform 0.25s ease;
+    transition: transform .25s ease;
     vertical-align: middle;
     color: var(--cor-areia);
 }
-
-html, body {
-    min-height: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--cor-fundo-neutro);
-    color: var(--cor-texto-escuro);
-}
-
-main.pagina-interna {
-    padding: 8rem 0;
-}
-/* Header e Footer */
-
-header {
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-    border-radius: 10px;
-    margin-block: 20px;
-    align-self: center;
-    width: 95%;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    justify-content: space-between;
-    text-shadow: 0 4px 20px rgba(0,0,0,.6);
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 1000;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--cor-texto-escuro);
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.96),
-            rgba(0, 0, 0,0.98),
-            rgba(0, 0, 0,0.96)
-        );
-    color: var(--cor-areia);
-    padding: 15px;
-    width: 100%;
-    font-size: 10px;
-}
-
-/* Estilização de tags padrão */
 
 a {
     text-decoration: none;
@@ -143,11 +118,62 @@ h1 {
     color: var(--cor-areia);
 }
 
-h2 {
-    
+/* ================================================================
+   HEADER E FOOTER
+================================================================ */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 95%;
+
+    padding: 15px;
+    margin-block: 20px;
+
+    align-self: center;
+
+    border-radius: 10px;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%);
+
+    z-index: 1000;
+
+    text-shadow: 0 4px 20px rgba(0,0,0,.6);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
-/* Nav */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 15px;
+
+    color: var(--cor-areia);
+    font-size: 10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.96),
+            rgba(0,0,0,.98),
+            rgba(0,0,0,.96)
+        );
+}
+
+/* ================================================================
+   NAVEGAÇÃO
+================================================================ */
 
 nav {
     display: flex;
@@ -160,58 +186,71 @@ nav {
 }
 
 .dropdown-toggle {
-    background: none;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    margin-inline-end: 15px;
-    font-family: inherit;
-    color: var(--cor-areia);
+
     display: flex;
     align-items: center;
     gap: 4px;
+
+    background: none;
+
+    cursor: pointer;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+
+    margin-inline-end: 15px;
+
+    color: var(--cor-areia);
 }
 
+/* Animações */
 
-/* Gira ao passar o mouse */
-.dropdown:hover .dropdown-toggle .material-symbols-outlined {
-    transform: rotate(180deg);
-}
-
-/* Gira ao clicar (classe adicionada pelo JS) */
-.dropdown.active .dropdown-toggle .material-symbols-outlined {
-    transform: rotate(180deg);
-}
-
+.dropdown:hover .dropdown-toggle .material-symbols-outlined,
+.dropdown.active .dropdown-toggle .material-symbols-outlined,
 .dropdown.pagina-atual .dropdown-toggle .material-symbols-outlined {
     transform: rotate(180deg);
 }
 
-/* Menu suspenso */
+/* Menu */
 
 .dropdown-menu {
+
     display: flex;
     flex-direction: column;
+
     position: absolute;
+
     top: 100%;
     left: 0;
-    background-color: var(--cor-fundo-neutro);
-        background:
-        linear-gradient(
-            to bottom,
-            rgba(215, 235, 155, 0.05),
-            rgba(215, 235, 155,0.005),
-            rgba(215, 235, 155,0.30)
-        );
+
     min-width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+
     overflow: hidden;
+
+    border-radius: 4px;
+
     z-index: 10;
+
     opacity: 0;
     visibility: hidden;
+
     transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(215,235,155,.05),
+            rgba(215,235,155,.005),
+            rgba(215,235,155,.30)
+        );
+
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s;
 }
 
 .dropdown.active .dropdown-menu,
@@ -222,23 +261,29 @@ nav {
 }
 
 .dropdown-menu a {
-    color: var(--cor-areia);
+
     padding: 10px 15px;
+
     margin-inline-end: 0;
+
     font-size: 13px;
-    transition: background-color 0.2s ease;
+
+    color: var(--cor-areia);
+
+    transition: background-color .2s ease;
 }
 
 .dropdown-menu a:hover {
-    background-color: var(--cor-verde-menta);
-        background:
+
+    color: var(--cor-verde-musgo);
+
+    background:
         linear-gradient(
             to bottom,
-            rgba(197, 216, 154, 0.70),
-            rgba(197, 216, 154,0.90),
-            rgba(197, 216, 154,0.70)
+            rgba(197,216,154,.70),
+            rgba(197,216,154,.90),
+            rgba(197,216,154,.70)
         );
-    color: var(--cor-verde-musgo);
 }
 
 .dropdown-menu.align-right {
@@ -246,3 +291,145 @@ nav {
     right: 0;
 }
 
+/* ================================================================
+   SEÇÕES COMPARTILHADAS
+================================================================ */
+
+.secao-escura {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 8rem 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #1b1b1b 40%,
+            #242424 100%
+        );
+}
+
+.secao-escura::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -200px;
+    left: -200px;
+
+    width: 500px;
+    height: 500px;
+
+    pointer-events: none;
+}
+
+.secao-escura::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -250px;
+    right: -250px;
+
+    width: 600px;
+    height: 600px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(86,102,56,.20) 0%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+/* ================================================================
+   TÍTULOS PADRONIZADOS
+================================================================ */
+
+.titulo-secao {
+
+    text-align: center;
+
+    max-width: 80%;
+
+    padding: 5%;
+
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.subtitulo {
+
+    color: var(--cor-verde-oliva);
+
+    letter-spacing: 4px;
+
+    font-size: 1rem;
+}
+
+.titulo-secao h2 {
+
+    font-family: "Six Caps", sans-serif;
+
+    font-size: 10rem;
+
+    line-height: .9;
+
+    margin-block: 40px;
+
+    color: var(--cor-areia);
+
+    text-shadow: 0 4px 20px rgba(0,0,0,.6);
+}
+
+.pequeno {
+
+    font-family: "Six Caps", sans-serif;
+
+    font-size: 5rem;
+
+    line-height: .9;
+
+    color: var(--cor-areia);
+
+    margin-inline-start: 10%;
+    margin-block-start: 5%;
+    margin-block-end: 2%;
+
+    text-shadow: 0 4px 20px rgba(0,0,0,.6);
+}
+
+.titulo-secao p {
+
+    line-height: 1.8;
+
+    color: var(--cor-areia);
+}
+
+.titulo-secao p::before,
+.titulo-secao p::after {
+
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    margin-block: 30px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--cor-areia),
+            transparent
+        );
+}

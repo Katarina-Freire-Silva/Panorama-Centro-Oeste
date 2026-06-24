@@ -40,10 +40,17 @@ body.pagina-interna::before {
 
 #radio {
     position: relative;
-    text-align: center;
-    padding: 80px 0;
+
     width: 100%;
+
+    text-align: center;
+
+    padding-top: 200px;
+    padding-bottom: 120px;
+
+    flex: 1;
 }
+
 
 main {
     min-height: calc(100vh - var(--altura-header) - var(--altura-footer));
@@ -74,22 +81,36 @@ main {
 
 .radio-layout {
     width: 100%;
-    max-width: 1700px;
+    max-width: 1800px;
+
     margin: 0 auto;
+    padding: 0 40px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     gap: 120px;
+
+    min-height: calc(
+        100vh
+        - var(--altura-header)
+        - var(--altura-footer)
+    );
 }
+
 /* ==================================================
    DISCO
 ================================================== */
 
 .radio-player {
-    flex: 0 0 550px;
+    flex: 0 0 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .disco-wrapper {
     width: 710px;
@@ -211,9 +232,11 @@ main {
 
 .radio-filtros {
     flex: 1;
-    max-width: 600px;
-    min-width: 500px;
+
+    max-width: 700px;
+    min-width: 600px;
 }
+
 .filtro-grupo {
     gap: 12px;
     padding: 20px;
@@ -514,14 +537,20 @@ main {
 ================================================== */
 
 .lista-musicas-wrapper {
-    max-height: 240px; 
-    overflow-y: auto; 
-    background-color: rgb(255, 255, 255, 0.02); 
-    border-radius: 8px; 
-    padding: 10px; 
-    scrollbar-width: thin; 
-    scrollbar-color: rgb(255, 255, 255, 0.02);
+    height: 420px;
+
+    overflow-y: auto;
+
+    background-color: rgb(255,255,255,.02);
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255,255,255,.02);
 }
+
 
 .lista-musicas-wrapper::-webkit-scrollbar { 
     width: 8px; 
@@ -580,3 +609,70 @@ main {
         0 0 25px rgba(255,255,255,.1);
 }
 
+
+/* ==================================================
+   CORREÇÃO DO FOOTER
+================================================== */
+
+body.pagina-interna {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main.pagina-interna {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+}
+
+@media (max-width: 1400px){
+
+    .radio-layout{
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .radio-player{
+        flex: unset;
+    }
+
+    .radio-filtros{
+        min-width: unset;
+        width: 95%;
+        max-width: 900px;
+    }
+
+    .disco-wrapper{
+        width: 500px;
+        height: 500px;
+    }
+
+    .disco{
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .disco-wrapper{
+        width: 320px;
+        height: 320px;
+    }
+
+    .disco{
+        width: 300px;
+        height: 300px;
+    }
+
+    .radio-layout{
+        padding: 0 20px;
+    }
+}
