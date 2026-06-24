@@ -11,7 +11,7 @@
 #home-centroOeste .titulo-secao{
     text-align: center;
     max-width: 1000px;
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 4em auto;
 }
 
 
@@ -67,7 +67,7 @@
 }
 
 .introducao h2 {
-    font-size: 1rem;
+    font-size: 1em;
     color: var(--cor-areia);
     text-shadow: 0 4px 20px rgba(0,0,0,0.6);
     margin-block: 15px;
@@ -147,12 +147,12 @@
 .historia-periodo{
     color: var(--cor-verde-menta);
     letter-spacing: 4px;
-    font-size: 1.1rem;
+    font-size: 1.1em;
 }
 
 .historia-conteudo h2{
     font-family: "Six Caps", sans-serif;
-    font-size: 10rem;
+    font-size: 10em;
     color: var(--cor-areia);
     line-height: 0.9;
     text-shadow: 0 4px 20px rgba(0,0,0,.6);
@@ -160,7 +160,7 @@
 }
 
 .historia-conteudo p{
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.8;
     max-width: 600px;
 }
@@ -182,7 +182,7 @@
     cursor: pointer;
 
     color: white;
-    font-size: 2rem;
+    font-size: 2em;
 
     background: rgba(0,0,0,.3);
 
@@ -339,12 +339,12 @@
 .estado-texto span{
     color: var(--cor-verde-oliva);
     letter-spacing: 3px;
-    font-size: .9rem;
+    font-size: .9em;
 }
 
 .estado-texto h3{
     font-family: "Six Caps", sans-serif;
-    font-size: 8rem;
+    font-size: 8em;
     line-height: .9;
     color: var(--cor-areia);
 }
@@ -352,7 +352,7 @@
 .estado-texto p{
     color: var(--cor-areia);
     line-height: 1.8;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 

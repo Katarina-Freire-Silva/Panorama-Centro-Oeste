@@ -184,13 +184,13 @@ main {
 
 .disco-furo h1 {
     font-family: "Six Caps", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     color: var(--cor-areia);
     letter-spacing: 2px;
 }
 
 .disco-furo h2 {
-    font-size: .75rem;
+    font-size: .75em;
     color: rgba(255,255,255,.8);
 }
 
@@ -247,7 +247,7 @@ main {
 
 .filtro-grupo label{
     color:var(--cor-verde-menta);
-    font-size:.9rem;
+    font-size:.9em;
 }
 
 .filtro-grupo select {
