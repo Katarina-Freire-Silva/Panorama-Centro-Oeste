@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const loading = document.getElementById("noticias-loading");
     const erro = document.getElementById("noticias-erro");
     const botoesFiltro = document.querySelectorAll(".filtro-estado");
+    let paginaAtual = 0;
+    let noticiasAtuais = [];
+
+    const NOTICIAS_POR_PAGINA = 10;
+
+
 
     // ATENÇÃO: troque pela sua chave da GNews (veja nota de segurança abaixo)
     const CURRENT_API_KEY = "PtGMTJafHOvx3hGnKpM58Cr7aPODb0P1VPH4vw_HA1svii7H";
@@ -420,27 +426,67 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function renderizarNoticias(artigos) {
+    function renderizarNoticias(artigos){
+
+        noticiasAtuais = artigos;
+        paginaAtual = 0;
+
+        renderizarPagina();
+    }
+
+    function renderizarPagina(){
+
         grid.innerHTML = "";
 
-        artigos.forEach((artigo) => {
+        const inicio =
+            paginaAtual * NOTICIAS_POR_PAGINA;
+
+        const fim =
+            inicio + NOTICIAS_POR_PAGINA;
+
+        const noticiasPagina =
+            noticiasAtuais.slice(inicio, fim);
+
+        noticiasPagina.forEach((artigo) => {
+
             const card = document.createElement("a");
+
             card.classList.add("noticia-card");
+
             card.href = artigo.url;
             card.target = "_blank";
             card.rel = "noopener noreferrer";
+
             card.style.textDecoration = "none";
             card.style.color = "inherit";
 
-            const dataFormatada = formatarData(artigo.published);
+            const dataFormatada =
+                formatarData(artigo.published);
 
             card.innerHTML = `
-                <img src="${artigo.image || ''}" alt="${artigo.title}" onerror="this.style.display='none'">
+                <img
+                    src="${artigo.image || ''}"
+                    alt="${artigo.title}"
+                    onerror="this.style.display='none'">
+
                 <div class="noticia-conteudo">
-                    <span class="noticia-fonte">${artigo.author || "Fonte desconhecida"}</span>
-                    <h3 class="noticia-titulo">${artigo.title}</h3>
-                    <p class="noticia-resumo">${artigo.description || ""}</p>
-                    <span class="noticia-data">${dataFormatada}</span>
+
+                    <span class="noticia-fonte">
+                        ${artigo.author || "Fonte desconhecida"}
+                    </span>
+
+                    <h3 class="noticia-titulo">
+                        ${artigo.title}
+                    </h3>
+
+                    <p class="noticia-resumo">
+                        ${artigo.description || ""}
+                    </p>
+
+                    <span class="noticia-data">
+                        ${dataFormatada}
+                    </span>
+
                 </div>
             `;
 
@@ -469,6 +515,129 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const btnApiAnterior =
+    document.querySelector(".api-anterior");
+
+    const btnApiProximo =
+        document.querySelector(".api-proximo");
+
+    if(btnApiAnterior && btnApiProximo){
+
+        btnApiProximo.addEventListener("click", () => {
+
+            const totalPaginas =
+                Math.ceil(
+                    noticiasAtuais.length /
+                    NOTICIAS_POR_PAGINA
+                );
+
+            paginaAtual++;
+
+            if(paginaAtual >= totalPaginas){
+                paginaAtual = 0;
+            }
+
+            renderizarPagina();
+        });
+
+        btnApiAnterior.addEventListener("click", () => {
+
+            const totalPaginas =
+                Math.ceil(
+                    noticiasAtuais.length /
+                    NOTICIAS_POR_PAGINA
+                );
+
+            paginaAtual--;
+
+            if(paginaAtual < 0){
+                paginaAtual = totalPaginas - 1;
+            }
+
+            renderizarPagina();
+        });
+
+    }
+
     // ----- Carrega notícias da região inteira ao abrir a página -----
     buscarNoticias("centro-oeste");
 });
+
+/* ---------------------- SLIDER REPORTAGENS ---------------------- */
+
+const cardsJornal = document.querySelectorAll(".noticia-jornal-card");
+
+const btnAnteriorJornal = document.querySelector(
+    ".slider-noticias-jornal .historia-anterior"
+);
+
+const btnProximoJornal = document.querySelector(
+    ".slider-noticias-jornal .historia-proximo"
+);
+
+const indicadoresJornal = document.querySelector(
+    ".slider-noticias-jornal .historia-indicadores"
+);
+
+if (cardsJornal.length > 0) {
+
+    let atualJornal = 0;
+
+    cardsJornal.forEach((_, index) => {
+
+        const ponto = document.createElement("div");
+
+        ponto.classList.add("historia-ponto");
+
+        if(index === 0){
+            ponto.classList.add("ativo");
+        }
+
+        ponto.addEventListener("click", () => {
+            mostrarNoticia(index);
+        });
+
+        indicadoresJornal.appendChild(ponto);
+
+    });
+
+    const pontosJornal =
+        indicadoresJornal.querySelectorAll(".historia-ponto");
+
+    function mostrarNoticia(indice){
+
+        cardsJornal[atualJornal].classList.remove("ativo");
+        pontosJornal[atualJornal].classList.remove("ativo");
+
+        atualJornal = indice;
+
+        cardsJornal[atualJornal].classList.add("ativo");
+        pontosJornal[atualJornal].classList.add("ativo");
+
+    }
+
+    btnProximoJornal.addEventListener("click", () => {
+
+        let proximo = atualJornal + 1;
+
+        if(proximo >= cardsJornal.length){
+            proximo = 0;
+        }
+
+        mostrarNoticia(proximo);
+
+    });
+
+    btnAnteriorJornal.addEventListener("click", () => {
+
+        let anterior = atualJornal - 1;
+
+        if(anterior < 0){
+            anterior = cardsJornal.length - 1;
+        }
+
+        mostrarNoticia(anterior);
+
+    });
+
+}
