@@ -2,7 +2,6 @@
   <img src="./image/logo-preta.png" alt="Panorama Centro-Oeste" width="250">
 </p>
 
-# 🌄 Panorama Centro-Oeste
 
 ## 📌 Integrantes do Grupo
 
@@ -175,38 +174,6 @@ Responsável pela obtenção das notícias exibidas em tempo real.
 
 * GitHub
 * GitHub Pages
-
----
-
-## 📂 Estrutura do Projeto
-
-```text
-Panorama-Centro-Oeste/
-│
-├── index.html
-│
-├── pages/
-│   ├── noticias.html
-│   ├── costumes.html
-│   ├── cultura.html
-│   ├── turismo.html
-│   └── radio.html
-│
-├── css/
-│   ├── noticias.css
-│   ├── costumes.css
-│   ├── cultura.css
-│   ├── turismo.css
-│   └── radio.css
-│
-├── js/
-│   ├── noticias.js
-│   ├── turismo.js
-│   └── radio.js
-│
-└── image/
-```
-
 ---
 
 ## 📚 Referências Pesquisadas
