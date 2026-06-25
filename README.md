@@ -132,7 +132,7 @@ Já os tons escuros garantem contraste, elegância e melhor legibilidade, criand
 
 **Figma do Projeto:**
 
-[INSERIR LINK DO FIGMA]
+[https://www.figma.com/file/m9hrenlFYYMb9af1E3lYDH?type=design]
 
 ---
 
