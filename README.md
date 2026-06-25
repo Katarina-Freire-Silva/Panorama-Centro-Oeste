@@ -220,6 +220,12 @@ Responsável pela obtenção das notícias exibidas em tempo real.
 
 ---
 
+## ⚠️ Orientações adicionais
+
+Caso ao abri o site as informações pareçam estar muito grandes, redefina a altura da tela para 80%.
+
+---
+
 ## 📄 Licença
 
 Este projeto foi desenvolvido para fins educacionais e acadêmicos.

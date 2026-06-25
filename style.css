@@ -121,26 +121,17 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     width: 95%;
-
     padding: 15px;
     margin-block: 20px;
-
     align-self: center;
-
     border-radius: 10px;
-
     position: fixed;
     top: 0;
     left: 50%;
-
     transform: translate(-50%);
-
     z-index: 1000;
-
     text-shadow: 0 4px 20px rgba(0,0,0,.6);
-
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -149,14 +140,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 100%;
-
     padding: 20px;
-
     color: var(--cor-areia);
     font-size: 13px;
-
     background:
         linear-gradient(
             to bottom,
